@@ -20,6 +20,10 @@ export const url = (p = '') => {
   return `${base}/${p.replace(/^\//, '')}`;
 };
 
+/** PDF local do item, se existir em public/. */
+export const pdf = (item) =>
+  item.ficheiro && fs.existsSync(path.resolve('public', item.ficheiro)) ? url(item.ficheiro) : null;
+
 /** Resolve o link de um item com "url" externo ou "ficheiro" local em public/. */
 export const link = (item) => {
   if (item.ficheiro && fs.existsSync(path.resolve('public', item.ficheiro))) return url(item.ficheiro);

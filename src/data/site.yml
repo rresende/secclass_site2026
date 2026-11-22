@@ -12,12 +12,13 @@ descricao: "O sistema de classificação da construção para Portugal, adaptado
 
 # Logótipo: coloque o ficheiro em public/img/ e indique o caminho.
 # Enquanto estiver vazio, o site usa o logótipo em texto.
-logo: ""
+logo: "img/secclass-wordmark.svg"
+logo_completo_branco: "img/secclass-logo-branco.svg"
 
 manutencao: "O SECClasS é mantido pela Escola de Tecnologias Digitais Aplicadas do Iscte Sintra, com contributos técnicos da comunidade."
 escola:
   nome: "Escola de Tecnologias Digitais Aplicadas — Iscte Sintra"
-  url: "https://www.iscte-iul.pt/"
+  url: "https://www.iscte-iul.pt/iscte/escolas/escola-tecnologias-digitais-aplicadas/introducao"
 
 pesquisa_url: "https://pesquisa.secclass.pt/"
 repositorio_dados: "https://github.com/rresende/secclass"

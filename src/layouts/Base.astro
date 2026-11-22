@@ -39,12 +39,16 @@ const nav = [
       <div class="wrap topbar-inner">
         <a class="brand" href={url('/')} aria-label={`${site.nome} — início`}>
           {site.logo
-            ? <img src={url(site.logo)} alt={site.nome} height="36" />
+            ? <img src={url(site.logo)} alt={site.nome} height="34" style="display:block;height:34px;width:auto" />
             : <span class="wordmark">SEC<span>Clas</span>S</span>}
         </a>
+        <nav class="nav-desktop" aria-label="Principal">
+          {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+          <a class="btn btn-sm" href={url('/pesquisa/')}>Pesquisar</a>
+        </nav>
         <details class="menu">
           <summary aria-label="Menu">Menu</summary>
-          <nav aria-label="Principal">
+          <nav aria-label="Principal (telemóvel)">
             {nav.map((n) => <a href={n.href}>{n.label}</a>)}
             <a class="btn btn-sm" href={url('/pesquisa/')}>Pesquisar</a>
           </nav>
@@ -59,7 +63,7 @@ const nav = [
     <footer class="footer">
       <div class="wrap footer-grid">
         <div>
-          <p class="wordmark wordmark-light">SEC<span>Clas</span>S</p>
+          <img src={url(site.logo_completo_branco)} alt="SECClasS — Sustainability Enhanced Construction Classification System" style="width:220px;height:auto;margin-bottom:12px" />
           <p class="muted-light">{site.manutencao}</p>
         </div>
         <div>

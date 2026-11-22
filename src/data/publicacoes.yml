@@ -10,21 +10,81 @@
 #    titulo, autores (lista), instituicao, local (revista, congresso,
 #    repositório), ano, tipo (artigo | comunicacao | dissertacao |
 #    tese | relatorio | livro), categoria (projeto | terceiros),
-#    resumo, papel_secclass, url (link direto para o trabalho),
-#    ficheiro (opcional: PDF em public/docs/), estado, fonte, adicionado
+#    resumo, papel_secclass, url (link direto/DOI), ficheiro (PDF em
+#    public/docs/, opcional), estado, fonte, adicionado
 # =====================================================================
 
-- titulo: "Projeto SECClasS: o desenvolvimento de um sistema de classificação da construção com componente de sustentabilidade adaptado ao BIM"
-  autores: ["Equipa SECClasS"]
-  instituicao: "Iscte, LNEC, Universidade do Minho, A-Lab, Marta Campos Arquitetura"
+# --------------------------- Trabalhos que usam o SECClasS ---------------------------
+
+- titulo: "A BIM-based tool for embodied carbon assessment using a Construction Classification System"
+  autores: ["Sara Parece", "Ricardo Pontes Resende", "Vasco Rato"]
+  instituicao: "Iscte – Instituto Universitário de Lisboa"
+  local: "Developments in the Built Environment, vol. 19, 100467 (Elsevier, acesso aberto)"
+  ano: 2024
+  tipo: artigo
+  categoria: terceiros
+  resumo: "Propõe um método para avaliar o carbono incorporado a partir de modelos BIM classificados com um sistema de classificação da construção, que fornece a estrutura de dados, faz a correspondência entre objetos BIM e impactos ambientais em bases de dados de ACV e acomoda diferentes níveis de desenvolvimento (LoD). Testado em modelos reais (375 kgCO2e/m² numa moradia e 426 kgCO2e/m² num edifício multifamiliar), mostrou adaptar-se a diferentes LoD e técnicas de modelação e poupar até 20 horas de remodelação."
+  papel_secclass: "O sistema de classificação é a linguagem comum entre o modelo BIM e as bases de dados de ACV: os códigos de classificação ligam cada objeto ao respetivo impacto ambiental."
+  url: "https://doi.org/10.1016/j.dibe.2024.100467"
+  ficheiro: ""
+  estado: publicado
+  fonte: "Crossref / OpenAlex"
+
+- titulo: "As potencialidades e desafios da implementação BIM adaptada ao controlo de segurança estrutural de barragens de betão"
+  autores: ["Carlos Serra"]
+  instituicao: "LNEC"
+  local: "4.º Congresso Português de Building Information Modelling (PTBIM 2022), Braga"
+  ano: 2022
+  tipo: comunicacao
+  categoria: terceiros
+  resumo: "Discute a aplicação da metodologia BIM ao controlo de segurança estrutural de barragens de betão — monitorização, interpretação dos resultados da observação e avaliação da segurança — e os requisitos de gestão da informação que daí decorrem."
+  papel_secclass: "Adota o Uniclass 2015 proposto pelo SECClasS para o contexto português como base comum para identificar objetos e ligar o modelo BIM ao sistema de gestão da informação, e refere a ferramenta de pesquisa SECClasS."
+  url: "https://doi.org/10.21814/uminho.ed.32.31"
+  ficheiro: "docs/PTBIM2022_BIM-Barragens.pdf"
+  estado: publicado
+  fonte: "site SECClasS (2022)"
+
+- titulo: "Modelação da informação e ferramenta digital orientadas à produção automática do MQT no contexto da disciplina de Arquitetura"
+  autores: ["Lucas Vieira", "Marta Campos", "José Granja", "Miguel Azenha"]
+  instituicao: "Universidade do Minho; Marta Campos Arquitetura"
+  local: "4.º Congresso Português de Building Information Modelling (PTBIM 2022), Braga"
+  ano: 2022
+  tipo: comunicacao
+  categoria: terceiros
+  resumo: "Desenvolve um add-in para Revit (pyRevit/IronPython) que gera automaticamente o Mapa de Quantidades de Trabalho com especificações técnicas e estimativa de custo preliminar, a partir do modelo BIM e de uma base de dados de especificações estruturada por um sistema de classificação."
+  papel_secclass: "Referido como o sistema de classificação nacional baseado no Uniclass 2015 em desenvolvimento, que estrutura a correspondência entre modelo e base de dados de especificações."
+  url: "https://doi.org/10.21814/uminho.ed.32.17"
+  ficheiro: "docs/PTBIM2022_MQT-Arquitetura.pdf"
+  estado: publicado
+  fonte: "site SECClasS (2022)"
+
+- titulo: "Desenvolvimentos na automação da extração de quantidades – Projeto Metabuilding"
+  autores: ["Filipe Lima", "Sébastien Roux", "Tiago Pedro", "Ricardo Pontes Resende"]
+  instituicao: "Limsen Consulting; Iscte"
+  local: "4.º Congresso Português de Building Information Modelling (PTBIM 2022), Braga"
+  ano: 2022
+  tipo: comunicacao
+  categoria: terceiros
+  resumo: "Apresenta uma aplicação online para visualização e auditoria de modelos e mapas de quantidades e dois plugins para Navisworks que, com a tradução portuguesa do Uniformat, automatizam a extração de quantidades a partir de modelos BIM."
+  papel_secclass: "Trabalho cofinanciado pelo projeto SECClasS; usa a tradução portuguesa do Uniformat II disponibilizada no SECClasS."
+  url: "https://doi.org/10.21814/uminho.ed.32.15"
+  ficheiro: "docs/PTBIM2022_Metabuilding.pdf"
+  estado: publicado
+  fonte: "site SECClasS (2022)"
+
+# --------------------------- Publicações do projeto ---------------------------
+
+- titulo: "Projeto SECClasS – O desenvolvimento de um sistema de classificação da construção com componente de sustentabilidade adaptado ao BIM"
+  autores: ["Angie Mendez", "Daniel Cale", "Filipa Salvado", "Inês Almeida", "João Manuel Miranda", "José Granja", "Luís Fonseca", "Manoel Wagner de Mello", "Maria João Falcão Silva", "Marta Campos", "Miguel Azenha", "Mohamad El Sibaii", "Paula Couto", "Ricardo Pontes Resende", "Rodrigo Tavares Lima", "Sara Parece", "Tiago Pedro"]
+  instituicao: "A-Lab; Iscte; LNEC; Universidade do Minho; Marta Campos Arquitetos"
   local: "4.º Congresso Português de Building Information Modelling (PTBIM 2022), Braga"
   ano: 2022
   tipo: comunicacao
   categoria: projeto
-  resumo: ""
-  papel_secclass: "Apresenta o próprio sistema: objetivos, seleção do Uniclass 2015 e adaptação à sustentabilidade."
-  url: ""
-  ficheiro: "docs/Projeto-SECCLASS-PTBIM-2022.pdf"
+  resumo: "Apresenta o projeto SECClasS, financiado pelo EEA Grants, que desenvolve um sistema de classificação da informação da construção orientado para o BIM e otimizado para a sustentabilidade, para apoiar todos os usos BIM e todas as fases do ciclo de vida."
+  papel_secclass: "Descreve o próprio sistema: objetivos, seleção do Uniclass 2015, tradução e ferramentas."
+  url: "https://doi.org/10.21814/uminho.ed.77.23"
+  ficheiro: "docs/PTBIM2022_Projeto-SECClasS.pdf"
   estado: publicado
   fonte: "site SECClasS (2022)"
 
@@ -35,10 +95,10 @@
   ano: 2022
   tipo: comunicacao
   categoria: projeto
-  resumo: ""
-  papel_secclass: "Estudo de base do projeto: análise comparativa dos sistemas internacionais que fundamentou a escolha do Uniclass."
-  url: ""
-  ficheiro: "docs/Sistemas-Classificacao-LNEC-PTBIM-2022.pdf"
+  resumo: "Analisa a experiência internacional de sistemas de classificação da informação da construção (CICS) normalizados e a sua adaptação a requisitos de sustentabilidade e economia circular."
+  papel_secclass: "Estudo de base do projeto, que fundamentou a escolha do Uniclass 2015 para o CICS nacional."
+  url: "https://doi.org/10.21814/uminho.ed.32.54"
+  ficheiro: "docs/PTBIM2022_Sistemas-Classificacao-Sustentabilidade.pdf"
   estado: publicado
   fonte: "site SECClasS (2022)"
 
@@ -49,24 +109,24 @@
   ano: 2022
   tipo: comunicacao
   categoria: projeto
-  resumo: ""
-  papel_secclass: "Liga os indicadores Level(s) da UE às tabelas de classificação, para análises de sustentabilidade com o SECClasS."
-  url: ""
-  ficheiro: "docs/A-Abordagem-LEVELs-PTBIM-2022.pdf"
+  resumo: "Parte da abordagem Level(s) do Plano de Ação para a Economia Circular da Comissão Europeia para definir parâmetros de sustentabilidade num sistema de classificação, começando pelo macro-objetivo dos ciclos de vida de materiais circulares e eficientes."
+  papel_secclass: "Define como os indicadores Level(s) são incorporados no SECClasS."
+  url: "https://doi.org/10.21814/uminho.ed.77.25"
+  ficheiro: "docs/PTBIM2022_Abordagem-Levels.pdf"
   estado: publicado
   fonte: "site SECClasS (2022)"
 
 - titulo: "Rumo à definição de 'Product Data Templates' nacionais para aplicação generalizada em contexto BIM: esforços da CT197"
-  autores: ["Mohamad El Sibaii", "José Granja", "Renan Rocha Ribeiro", "Pedro Meda", "Ricardo Pontes Resende", "João dos Santos", "Pedro Lucas Martins", "António Aguiar Costa", "João Poças Martins", "Miguel Azenha"]
-  instituicao: "Universidade do Minho, FEUP, Iscte, IST — CT197"
+  autores: ["Mohamad El Sibaii", "José Granja", "Renan Rocha Ribeiro", "Pedro Meda", "Ricardo Resende", "João dos Santos", "Pedro Lucas Martins", "António Aguiar Costa", "João Poças Martins", "Miguel Azenha"]
+  instituicao: "Universidade do Minho; FEUP; Iscte; IST — CT197"
   local: "4.º Congresso Português de Building Information Modelling (PTBIM 2022), Braga"
   ano: 2022
   tipo: comunicacao
   categoria: projeto
-  resumo: ""
-  papel_secclass: "Product Data Templates desenvolvidos em articulação com o SECClasS e a CT197."
-  url: ""
-  ficheiro: "docs/PDTs-SECClasS-PTBIM-2022.pdf"
+  resumo: "Descreve os esforços da CT197 e de projetos de investigação para estabelecer Product Data Templates (PDT) nacionais, estruturas normalizadas de dados para produtos de construção, em linha com a ISO 23386:2020."
+  papel_secclass: "Trabalho financiado em parte pelo SECClasS; os PDT foram desenvolvidos com o apoio do projeto."
+  url: "https://doi.org/10.21814/uminho.ed.77.21"
+  ficheiro: "docs/PTBIM2022_Product-Data-Templates-CT197.pdf"
   estado: publicado
   fonte: "site SECClasS (2022)"
 
@@ -77,17 +137,31 @@
   ano: 2021
   tipo: comunicacao
   categoria: projeto
-  resumo: ""
+  resumo: "Analisa como os sistemas de classificação da informação da construção (CICS) precisam de ser adaptados para responder aos desafios da economia circular e dos Objetivos de Desenvolvimento Sustentável no setor AECO."
   papel_secclass: "Resultado da tarefa 2 do projeto: seleção do sistema de classificação e adaptação ao Level(s)."
   url: ""
-  ficheiro: "docs/CEES2021-Paper-ID10_VF.pdf"
+  ficheiro: "docs/CEES2021_CICS-Sustainability.pdf"
   estado: publicado
   fonte: "site SECClasS (2022)"
 
+- titulo: "Análise de conceitos, normas e sistemas de classificação da informação da construção"
+  autores: ["Rodrigo Tavares Lima", "Paula Couto", "Maria João Falcão", "Filipa Salvado", "Ricardo Resende", "Sara Parece"]
+  instituicao: "LNEC; Iscte"
+  local: "Relatório do projeto SECClasS, Lisboa"
+  ano: 2021
+  tipo: relatorio
+  categoria: projeto
+  resumo: "Relatório de 72 páginas que analisa conceitos, normas e sistemas de classificação da informação da construção existentes, como base para a escolha do sistema nacional."
+  papel_secclass: "Primeiro relatório do projeto; fundamenta a adoção do Uniclass 2015."
+  url: ""
+  ficheiro: "docs/Relatorio2021_Analise-Sistemas-Classificacao.pdf"
+  estado: publicado
+  fonte: "site SECClasS (2021)"
+
 - titulo: "Regras de modelação de objetos BIM"
-  autores: ["Equipa SECClasS"]
-  instituicao: "Projeto SECClasS"
-  local: "Relatório técnico do projeto"
+  autores: ["Mohamad El Sibaii", "Luciana Miranda", "José Granja", "Miguel Azenha", "CT197 – Task Force Objetos"]
+  instituicao: "Universidade do Minho; CT197"
+  local: "Relatório do projeto SECClasS, Lisboa"
   ano: 2021
   tipo: relatorio
   categoria: projeto
@@ -95,5 +169,19 @@
   papel_secclass: "Define como os objetos BIM são classificados e caracterizados com o SECClasS."
   url: ""
   ficheiro: "docs/Regras_modelacao_objetos_BIM.pdf"
+  estado: publicado
+  fonte: "site SECClasS (2021)"
+
+- titulo: "Contributo para um CICS nacional: tabelas de produtos, de propriedades, de formas de informação, de gestão e direção de projeto e de elementos"
+  autores: ["Paula Couto", "Maria João Falcão Silva", "Fernando Pinho"]
+  instituicao: "LNEC; CERIS, FCT-UNL"
+  local: "3.º Congresso Português de Building Information Modelling (PTBIM 2020), Porto"
+  ano: 2020
+  tipo: comunicacao
+  categoria: projeto
+  resumo: "Propõe o desenvolvimento das tabelas de Produtos, Propriedades, Formas de Informação e Gestão e Direção de Projeto para um CICS nacional, com base na ISO 12006-2 e no Uniclass 2015."
+  papel_secclass: "Trabalho preparatório, anterior ao SECClasS, que propôs a adoção do Uniclass 2015 como base do sistema nacional."
+  url: ""
+  ficheiro: "docs/PTBIM2020_Contributo-CICS-Nacional.pdf"
   estado: publicado
   fonte: "site SECClasS (2021)"

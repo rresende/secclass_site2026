@@ -21,7 +21,7 @@ Todo o conteúdo está em três ficheiros de texto. No GitHub, abra o ficheiro, 
 
 PDFs próprios (manuais, artigos): coloque-os em `public/docs/` e indique-os no campo `ficheiro`. Enquanto o ficheiro não existir, o site mostra "em migração" em vez de um link partido.
 
-Logótipos: coloque-os em `public/img/` e indique o caminho em `logo` (site) e `projeto.financiador.logo` (EEA Grants).
+Logótipos: `public/img/` (SVG gerados a partir do Poppins, em contornos). Falta o logo EEA Grants: coloque-o em `public/img/` e indique-o em `projeto.financiador.logo`.
 
 ## Agente de publicações
 

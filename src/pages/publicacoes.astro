@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { publicacoes, link, url } from '../lib/data.js';
+import { publicacoes, link, pdf, url } from '../lib/data.js';
 
 const tipos = { artigo: 'Artigo', comunicacao: 'Comunicação', dissertacao: 'Dissertação', tese: 'Tese', relatorio: 'Relatório', livro: 'Livro' };
 const grupos = [
@@ -32,6 +32,7 @@ const grupos = [
                   <p class="venue">{p.instituicao}{p.instituicao && p.local ? ' · ' : ''}{p.local}</p>
                   {p.resumo && <p>{p.resumo}</p>}
                   {p.papel_secclass && <p class="role"><strong>Papel do SECClasS:</strong> {p.papel_secclass}</p>}
+                  <p class="links">{p.url && <a href={p.url} rel="noopener">{p.url.includes('doi.org') ? 'DOI' : 'Ver original'}</a>}{pdf(p) && <a href={pdf(p)}>PDF</a>}</p>
                   {!href && <p class="meta muted" style="font-size:.85rem">Documento em migração para o novo site.</p>}
                 </article>
               );
