@@ -1,0 +1,205 @@
+# =====================================================================
+#  SECClasS — conteúdo do site
+#  Este é o ficheiro principal a editar. Não é preciso saber programar:
+#  mantenha a indentação (2 espaços) e as aspas onde existem.
+#  Depois de gravar no GitHub, o site é reconstruído automaticamente.
+# =====================================================================
+
+nome: "SECClasS"
+nome_completo: "Sistema de Classificação da Construção Orientado para a Sustentabilidade"
+nome_en: "Sustainability Enhanced Construction Classification System"
+descricao: "O sistema de classificação da construção para Portugal, adaptado do Uniclass 2015 e alinhado com a EN ISO 12006-2. Aberto e gratuito."
+
+# Logótipo: coloque o ficheiro em public/img/ e indique o caminho.
+# Enquanto estiver vazio, o site usa o logótipo em texto.
+logo: ""
+
+manutencao: "O SECClasS é mantido pela Escola de Tecnologias Digitais Aplicadas do Iscte Sintra, com contributos técnicos da comunidade."
+escola:
+  nome: "Escola de Tecnologias Digitais Aplicadas — Iscte Sintra"
+  url: "https://www.iscte-iul.pt/"
+
+pesquisa_url: "https://pesquisa.secclass.pt/"
+repositorio_dados: "https://github.com/rresende/secclass"
+repositorio_site: "https://github.com/rresende/secclass_site2026"
+
+contactos:
+  email: "info@secclass.pt"
+  email_sugestoes: "ricardo.resende@iscte-iul.pt"
+  linkedin: "https://www.linkedin.com/company/secclass-sustainability-enhanced-construction-classification-system"
+  youtube: "https://youtube.com/playlist?list=PLijhXZogmBZx7DLQw7l8Wzz74_jvXHJMM"
+
+rodape_links:
+  - nome: "construcaodigital.pt"
+    url: "https://construcaodigital.pt"
+
+licenca: >-
+  A tradução do Uniclass 2015 pelo projeto SECClasS é feita sob autorização da NBS e ao abrigo da licença
+  Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0).
+licenca_url: "https://creativecommons.org/licenses/by-nd/4.0/"
+
+# ---------------------------------------------------------------------
+#  Versão atual e tabelas
+# ---------------------------------------------------------------------
+versao_atual:
+  numero: "2.0"
+  data: "julho de 2025"
+  base: "Uniclass 2015 — abril de 2025"
+  autores: "Ricardo Pontes Resende e Sara Parece (Iscte)"
+
+tabelas:
+  - { codigo: "Co", nome: "Complexos", termos: 417, descricao: "Grandes conjuntos do ambiente construído, definidos por propósito ou função (ex.: complexos hospitalares, portos)." }
+  - { codigo: "En", nome: "Entidades", termos: 596, descricao: "Partes individuais de um ativo — edifícios, pontes, túneis — dentro de um complexo." }
+  - { codigo: "SL", nome: "Espaços / locais", termos: 1146, descricao: "Espaços onde ocorrem atividades ou se localizam equipamentos (rooms/spaces no Revit)." }
+  - { codigo: "EF", nome: "Elementos / funções", termos: 230, descricao: "Componentes principais e funções gerais; classificação macro em fases de LOIN baixo." }
+  - { codigo: "Ss", nome: "Sistemas", termos: 2706, descricao: "Conjuntos de produtos que funcionam em conjunto para um fim comum." }
+  - { codigo: "Pr", nome: "Produtos", termos: 8421, descricao: "Produtos individuais, de pequenos dispositivos a grandes equipamentos; projeto de execução e telas finais." }
+  - { codigo: "Ma", nome: "Materiais", termos: 447, descricao: "Materiais de construção e outros." }
+  - { codigo: "Ac", nome: "Atividades", termos: 948, descricao: "Atividades em ativos existentes ou a construir, ao longo do ciclo de vida." }
+  - { codigo: "TE", nome: "Ferramentas e equipamentos", termos: 882, descricao: "Equipamentos e veículos de construção e manutenção." }
+  - { codigo: "FI", nome: "Formas de informação", termos: 94, descricao: "Tipos de documentos: contratos, orçamentos, modelos 3D." }
+  - { codigo: "PM", nome: "Gestão de projeto", termos: 1105, descricao: "Requisitos e registos: relatórios, certificados." }
+  - { codigo: "Ro", nome: "Agentes", termos: 287, descricao: "Perfis individuais ou organizacionais: engenheiro, arquiteto, subempreiteiro." }
+  - { codigo: "Zz", nome: "CAD", termos: 132, descricao: "Conteúdos CAD e de modelação: layers, linhas, símbolos, anotações." }
+
+tabelas_nota: >-
+  As tabelas Riscos e Propriedades e características do Uniclass serão traduzidas numa versão futura.
+  O SECClasS inclui ainda termos específicos da realidade portuguesa (ex.: Co_20_60_99 — Centros e escolas de formação militar).
+
+# ---------------------------------------------------------------------
+#  Downloads (ficheiros alojados nas releases do repositório de dados)
+# ---------------------------------------------------------------------
+downloads:
+  - titulo: "Tabelas SECClasS v2.0"
+    formato: "Excel (.xlsx)"
+    descricao: "As 13 tabelas, com código, título em português e título Uniclass."
+    url: "https://github.com/rresende/secclass/releases/download/V2.0/Tabelas.SECClasS.V2.0.xlsx"
+    destaque: true
+  - titulo: "SECClasS v2.0 para Autodesk Revit"
+    formato: "Excel (.xlsx)"
+    descricao: "Para o Autodesk Standardized Data Tool for Revit (antigas BIM Interoperability Tools)."
+    url: "https://github.com/rresende/secclass/releases/download/V2.0/SECClasS_V2.0_AutodeskInteroperabilityTools.xlsx"
+  - titulo: "SECClasS v2.0 para Graphisoft Archicad"
+    formato: "XML"
+    descricao: "Tabelas no formato de classificação do Archicad, fornecidas pela Infor."
+    url: "https://github.com/rresende/secclass/releases/download/V2.0/SECClasS.V2.0.para.Archicad.xml"
+  - titulo: "Uniformat II em português"
+    formato: "Excel (.xlsx)"
+    descricao: "654 entradas, versões EN e PT. Tradução da Limsen Consulting com a Lipronerg Engenharia."
+    url: "https://github.com/rresende/secclass/releases/download/v1.0_uniformat/UniformatII_Portugues_V1.0.xlsx"
+  - titulo: "Uniformat II para Autodesk Revit"
+    formato: "Excel (.xlsx)"
+    descricao: "Tabela Uniformat II em português para as ferramentas de classificação da Autodesk."
+    url: "https://github.com/rresende/secclass/releases/download/v1.0_uniformat/UniformatII_Portugues_V1.0_AutodeskClassificationTools.xlsx"
+  - titulo: "Exportação para IFC"
+    formato: "TXT (property sets e mapeamento)"
+    descricao: "Ficheiros de parâmetros e de mapeamento de layers para exportar a classificação SECClasS em IFC."
+    url: "https://github.com/rresende/secclass/tree/main/ClassificationFiles/IFC_files"
+
+# ---------------------------------------------------------------------
+#  Histórico de versões (o mais recente primeiro)
+# ---------------------------------------------------------------------
+versoes:
+  - numero: "2.0"
+    data: "julho de 2025"
+    alteracoes:
+      - "Harmonização com o Uniclass 2015 de abril de 2025."
+      - "Tradução dos termos acrescentados ao Uniclass entre 2022 e abril de 2025; na tabela Pr-Produtos, parte dos novos termos são traduções por IA (em revisão)."
+      - "Revisão das tabelas e acréscimo de termos específicos para Portugal, a pedido de técnicos nacionais (identificados na ferramenta de pesquisa)."
+      - "Tradução da tabela Ma-Materiais."
+      - "Ferramenta de pesquisa com filtros por versão e por tabela; tabelas para Revit e Archicad atualizadas."
+  - numero: "1.0"
+    data: "2022"
+    alteracoes:
+      - "Primeira versão pública, com 12 tabelas traduzidas do Uniclass 2015 (Co, En, Ac, SL, EF, Ss, Pr, TE, FI, PM, Ro, Zz)."
+
+# ---------------------------------------------------------------------
+#  Recursos — "url" para links externos; "ficheiro" para PDFs guardados em
+#  public/docs/ (enquanto o ficheiro não existir, aparece "em migração").
+# ---------------------------------------------------------------------
+recursos:
+  - titulo: "Guia de utilização do SECClasS"
+    descricao: "Manual do sistema (versão 1.0, 2022)."
+    ficheiro: "docs/Guia_Utilizacao_SECClasS_V1.0.pdf"
+  - titulo: "Guia SECClasS no Revit"
+    descricao: "Classificar modelos com o Autodesk Standardized Data Tool (Revit 2022)."
+    ficheiro: "docs/Guia_Utilizacao_SECClasS_BIT_v1.0.pdf"
+  - titulo: "Regras de modelação de objetos BIM"
+    descricao: "Especificação para objetos BIM adequados a análises de sustentabilidade (2021)."
+    ficheiro: "docs/Regras_modelacao_objetos_BIM.pdf"
+  - titulo: "Biblioteca de objetos BIM"
+    descricao: "Objetos genéricos (RFA e IFC) com Product Data Templates: porta, lavatório, gesso cartonado, lã mineral, viga de madeira."
+    url: "https://github.com/rresende/secclass/tree/main/Objects"
+  - titulo: "Vídeos e tutoriais"
+    descricao: "Canal YouTube do SECClasS: utilização no Revit e no Archicad."
+    url: "https://youtube.com/playlist?list=PLijhXZogmBZxULushQjF2Y3ZE9T3QOXTw"
+
+# ---------------------------------------------------------------------
+#  O projeto financiado (2020–2023)
+# ---------------------------------------------------------------------
+projeto:
+  resumo: >-
+    O SECClasS nasceu de um projeto de investigação financiado pelo EEA Grants (2020–2023), cujo objetivo era facilitar
+    a Economia Circular na Construção através de um sistema de classificação da informação orientado para o BIM e para a
+    sustentabilidade. O projeto analisou os sistemas existentes e selecionou o Uniclass 2015 (2021), traduziu-o e
+    desenvolveu regras de modelação de objetos BIM (2021), criou aplicações web de apoio (2022) e produziu casos piloto
+    e ações de divulgação (2022). O evento final decorreu no LNEC a 12 de dezembro de 2022.
+  coordenador: "Ricardo Pontes Resende (Iscte)"
+  financiador:
+    nome: "EEA Grants"
+    url: "https://www.eeagrants.gov.pt/"
+    logo: ""   # ex.: /img/eea-grants.png — obrigatório manter visível
+    texto: >-
+      Através do Acordo sobre o Espaço Económico Europeu, a Islândia, o Liechtenstein e a Noruega financiam, através do
+      Mecanismo Financeiro EEA Grants, projetos que reduzem as disparidades sociais e económicas na Europa e reforçam as
+      relações bilaterais com os países beneficiários.
+
+parceiros:
+  - { nome: "ISTAR — Iscte", url: "https://istar.iscte-iul.pt/", descricao: "Centro de investigação do Iscte em tecnologias da informação, ambiente construído e ciências da complexidade. Coordenação." }
+  - { nome: "LNEC — Laboratório Nacional de Engenharia Civil", url: "https://www.lnec.pt/", descricao: "Instituto público de I&D em todos os domínios da Engenharia Civil." }
+  - { nome: "Universidade do Minho", url: "https://www.uminho.pt/", descricao: "Departamento de Engenharia Civil; coordenação do Curso Português de BIM." }
+  - { nome: "A-Lab", url: "https://a-lab.no/", descricao: "Atelier de arquitetura de Oslo, com estúdio em Portugal; referência em BIM e desenvolvimento urbano sustentável." }
+  - { nome: "Marta Campos Arquitetura", url: "https://martacampos.pt/", descricao: "Atelier do Porto pioneiro no uso de BIM na reabilitação sustentável." }
+
+equipa:
+  - { nome: "Ricardo Pontes Resende", inst: "Iscte", papel: "Coordenador" }
+  - { nome: "Paula Couto", inst: "LNEC" }
+  - { nome: "Maria João Falcão Silva", inst: "LNEC" }
+  - { nome: "Filipa Salvado", inst: "LNEC" }
+  - { nome: "Rodrigo Tavares Lima", inst: "LNEC" }
+  - { nome: "Miguel Azenha", inst: "Universidade do Minho" }
+  - { nome: "José Granja", inst: "Universidade do Minho" }
+  - { nome: "Mohamad El Sibaii", inst: "Universidade do Minho" }
+  - { nome: "Angie Mendez", inst: "A-Lab" }
+  - { nome: "Luís Fonseca", inst: "A-Lab" }
+  - { nome: "Inês Almeida", inst: "A-Lab" }
+  - { nome: "João Manuel Miranda", inst: "A-Lab" }
+  - { nome: "Marta Campos", inst: "Marta Campos Arquitetos" }
+  - { nome: "Sara Parece", inst: "Iscte" }
+  - { nome: "Tiago Pedro da Costa", inst: "Iscte" }
+  - { nome: "João Guerreiro", inst: "Iscte" }
+  - { nome: "Miguel Torres Curado", inst: "Iscte" }
+  - { nome: "Daniel Dantas Cale", inst: "Iscte" }
+  - { nome: "Manoel Wagner Gaia de Melo", inst: "Iscte" }
+
+conselho_consultivo:
+  - { nome: "António Aguiar Costa", inst: "CT197 / BUILT CoLAB / IST" }
+  - { nome: "Paulo Vieira Fonseca (in memoriam)", inst: "BUILT CoLAB / PTPC" }
+  - { nome: "Ricardo Miguel", inst: "Saraiva + Associados" }
+  - { nome: "Rui de Klerk", inst: "FA-ULisboa" }
+
+# Contributos e associados da comunidade
+comunidade:
+  - { nome: "Limsen Consulting", url: "https://limsen.com/", contributo: "Tradução do Uniformat II (com a Lipronerg Engenharia)." }
+  - { nome: "Infor", url: "https://www.infor.pt/", contributo: "Tabelas e tutorial para o Graphisoft Archicad." }
+  - { nome: "Grupo Casais", url: "https://www.casais.pt/", contributo: "Partilha da sua tradução do Uniclass." }
+  - { nome: "Marta Campos Arquitetura", url: "https://martacampos.pt/", contributo: "Partilha da tradução do Uniclass; modelos piloto." }
+  - { nome: "Saraiva + Associados", url: "https://www.saraivaeassociados.com/", contributo: "Associado do projeto." }
+  - { nome: "Quadrante", url: "https://quadrante-engenharia.pt/", contributo: "Associado do projeto." }
+  - { nome: "NBS", url: "https://www.thenbs.com/", contributo: "Autorização para a tradução do Uniclass 2015." }
+
+projetos_relacionados:
+  - { nome: "CT197 — Comissão Técnica de Normalização BIM", url: "http://www.ct197.pt/" }
+  - { nome: "BUILT CoLAB", url: "https://builtcolab.pt/" }
+  - { nome: "Projeto CLOSER (LNEC)", url: "http://closer.lnec.pt" }
+  - { nome: "Circular EcoBIM", url: "https://circularecobim.eu/" }

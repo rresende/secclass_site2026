@@ -1,0 +1,177 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, publicacoes, url, link, totalTermos, fmt } from '../lib/data.js';
+
+const v = site.versao_atual;
+const recentes = publicacoes.slice(0, 4);
+const nPub = publicacoes.length;
+---
+<Base>
+  <!-- 1. Sistema de classificação -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="badge">Versão {v.numero} · {v.data}</span>
+      <h1>O sistema de classificação da construção para Portugal</h1>
+      <p class="lead">{site.nome_completo}. Adaptação aberta e gratuita do Uniclass 2015, alinhada com a EN&nbsp;ISO&nbsp;12006-2, para BIM e para todo o ciclo de vida do ambiente construído.</p>
+      <div class="ctas">
+        <a class="btn" href={url('/pesquisa/')}>Pesquisar termos</a>
+        <a class="btn btn-ghost" href="#downloads">Descarregar tabelas</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>{site.tabelas.length}</b><span>tabelas</span></div>
+        <div class="stat"><b>{fmt(totalTermos)}</b><span>termos</span></div>
+        <div class="stat"><b>{v.base.split('—')[1]?.trim() ?? v.base}</b><span>Uniclass de referência</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="downloads">
+    <div class="wrap">
+      <p class="kicker">Descarregar</p>
+      <h2>Tabelas e ficheiros para software BIM</h2>
+      <p class="intro">Todos os ficheiros estão versionados no <a href={site.repositorio_dados} rel="noopener">repositório público do SECClasS</a>.</p>
+      <div class="grid">
+        {site.downloads.map((d) => (
+          <a class={`card card-link ${d.destaque ? 'card-featured' : ''}`} href={d.url} rel="noopener">
+            <span class="pill">{d.formato}</span>
+            <h3 style="margin-top:10px">{d.titulo}</h3>
+            <p>{d.descricao}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="tabelas">
+    <div class="wrap">
+      <p class="kicker">Estrutura</p>
+      <h2>As {site.tabelas.length} tabelas do SECClasS</h2>
+      <p class="intro">Os prefixos (Co, En, Ss, Pr…) são os do Uniclass: a correspondência entre os dois sistemas mantém-se através dos códigos. As sete primeiras formam uma hierarquia do macro ao micro (ambientes, sistemas e produtos); as restantes apoiam a gestão da informação.</p>
+      <div class="tables">
+        {site.tabelas.map((t) => (
+          <div class="tcard">
+            <div class="tcode">{t.codigo}</div>
+            <div><h3>{t.nome} <small>{fmt(t.termos)} termos</small></h3><p>{t.descricao}</p></div>
+          </div>
+        ))}
+      </div>
+      <p class="muted" style="margin-top:20px">{site.tabelas_nota}</p>
+    </div>
+  </section>
+
+  <!-- 2. Atualizações -->
+  <section class="section" id="versoes">
+    <div class="wrap two-col">
+      <div>
+        <p class="kicker">Atualizações</p>
+        <h2>Histórico de versões</h2>
+        <p class="intro">A versão {v.numero} corresponde ao {v.base} e foi produzida por {v.autores}.</p>
+        <p class="intro">Encontrou um termo em falta ou uma tradução a melhorar? Use a <a href={url('/pesquisa/')}>ferramenta de pesquisa</a>, abra uma <a href={`${site.repositorio_dados}/issues`} rel="noopener">issue no GitHub</a> ou escreva para <a href={`mailto:${site.contactos.email_sugestoes}`}>{site.contactos.email_sugestoes}</a>.</p>
+      </div>
+      <ol class="timeline">
+        {site.versoes.map((ver) => (
+          <li>
+            <h3>v{ver.numero} <span class="muted" style="font-weight:400">· {ver.data}</span></h3>
+            <ul>{ver.alteracoes.map((a) => <li>{a}</li>)}</ul>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="recursos">
+    <div class="wrap">
+      <p class="kicker">Aprender e aplicar</p>
+      <h2>Recursos</h2>
+      <div class="grid">
+        {site.recursos.map((r) => {
+          const href = link(r);
+          return href
+            ? <a class="card card-link" href={href} rel="noopener"><h3>{r.titulo}</h3><p>{r.descricao}</p></a>
+            : <div class="card"><h3>{r.titulo}</h3><p>{r.descricao}</p><p class="meta">Em migração para o novo site.</p></div>;
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Trabalhos que usam o SECClasS -->
+  <section class="section" id="publicacoes">
+    <div class="wrap">
+      <p class="kicker">Investigação</p>
+      <h2>Trabalhos que usam o SECClasS</h2>
+      <p class="intro">Artigos, comunicações, dissertações e relatórios que usam ou referem o SECClasS. A lista é atualizada de 15 em 15 dias a partir de repositórios universitários e congressos, com validação humana antes de publicar.</p>
+      <div>
+        {recentes.map((p) => (
+          <article class="pub">
+            <h3>{link(p) ? <a href={link(p)} rel="noopener">{p.titulo}</a> : p.titulo}</h3>
+            <p class="authors">{p.autores.join(', ')}</p>
+            <p class="venue">{p.local} · {p.ano}</p>
+          </article>
+        ))}
+      </div>
+      <p><a class="btn btn-outline" href={url('/publicacoes/')}>Ver todos ({nPub})</a></p>
+    </div>
+  </section>
+
+  <!-- 4. Manutenção e comunidade -->
+  <section class="section section-dark" id="comunidade">
+    <div class="wrap two-col">
+      <div>
+        <p class="kicker" style="color:var(--sand)">Quem mantém</p>
+        <h2>Um sistema aberto, mantido em comunidade</h2>
+        <p style="font-size:1.15rem">{site.manutencao}</p>
+        <p class="muted-light">As propostas de novos termos, correções de tradução e ficheiros para software BIM são revistos e integrados em versões numeradas, com registo público de alterações.</p>
+        <p><a href={`${site.repositorio_dados}/issues/new`} rel="noopener">Propor uma alteração →</a></p>
+      </div>
+      <div>
+        <h3>Contributos técnicos</h3>
+        <ul class="list-plain">
+          {site.comunidade.map((c) => (
+            <li style="border-color:rgba(255,255,255,.12)"><a href={c.url} rel="noopener">{c.nome}</a> <span class="muted-light">— {c.contributo}</span></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. O projeto financiado -->
+  <section class="section" id="projeto">
+    <div class="wrap">
+      <p class="kicker">Origem</p>
+      <h2>O projeto SECClasS (2020–2023)</h2>
+      <p class="intro">{site.projeto.resumo}</p>
+
+      <h3 style="margin-top:32px">Parceiros</h3>
+      <div class="grid grid-sm">
+        {site.parceiros.map((p) => (
+          <a class="card card-link" href={p.url} rel="noopener"><h3>{p.nome}</h3><p>{p.descricao}</p></a>
+        ))}
+      </div>
+
+      <div class="two-col" style="margin-top:40px">
+        <div>
+          <h3>Equipa</h3>
+          <ul class="list-plain">
+            {site.equipa.map((m) => <li>{m.nome} <span class="muted">— {m.inst}{m.papel ? `, ${m.papel.toLowerCase()}` : ''}</span></li>)}
+          </ul>
+        </div>
+        <div>
+          <h3>Conselho consultivo</h3>
+          <ul class="list-plain">
+            {site.conselho_consultivo.map((m) => <li>{m.nome} <span class="muted">— {m.inst}</span></li>)}
+          </ul>
+          <h3 style="margin-top:32px">Projetos e entidades relacionados</h3>
+          <ul class="list-plain">
+            {site.projetos_relacionados.map((p) => <li><a href={p.url} rel="noopener">{p.nome}</a></li>)}
+          </ul>
+          <p style="margin-top:24px"><a href={url('/arquivo/')}>Notícias e eventos do projeto (arquivo) →</a></p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:40px">
+        <h3>Financiamento</h3>
+        <p style="margin:0">Projeto financiado pelo <a href={site.projeto.financiador.url} rel="noopener">{site.projeto.financiador.nome}</a>. {site.projeto.financiador.texto}</p>
+      </div>
+    </div>
+  </section>
+</Base>

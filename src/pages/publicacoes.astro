@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import { publicacoes, link, url } from '../lib/data.js';
+
+const tipos = { artigo: 'Artigo', comunicacao: 'Comunicação', dissertacao: 'Dissertação', tese: 'Tese', relatorio: 'Relatório', livro: 'Livro' };
+const grupos = [
+  { id: 'terceiros', titulo: 'Trabalhos de terceiros que usam o SECClasS', vazio: 'A primeira recolha automática está em curso. Conhece um trabalho que use o SECClasS? Envie-nos a referência.' },
+  { id: 'projeto', titulo: 'Publicações do projeto SECClasS', vazio: '' },
+];
+---
+<Base title="Publicações" description="Artigos científicos, dissertações e trabalhos que usam o sistema de classificação SECClasS.">
+  <section class="section" style="padding-top:32px">
+    <div class="wrap" style="max-width:900px">
+      <p class="kicker"><a href={url('/')}>SECClasS</a> / Publicações</p>
+      <h1 style="font-size:clamp(1.8rem,4vw,2.6rem)">Trabalhos que usam o SECClasS</h1>
+      <p class="intro">Recolha de artigos científicos, comunicações, dissertações e relatórios que usam ou referem o SECClasS. A lista é atualizada de 15 em 15 dias por um agente que pesquisa repositórios universitários portugueses (RCAAP), congressos de BIM (PTBIM e outros) e bases bibliográficas; cada entrada é revista antes de ser publicada. Os resumos são feitos a partir do texto público de cada trabalho; a referência é sempre o original.</p>
+      <p class="muted">Falta algum trabalho? Escreva para <a href="mailto:info@secclass.pt">info@secclass.pt</a>.</p>
+
+      {grupos.map((g) => {
+        const lista = publicacoes.filter((p) => (p.categoria ?? 'terceiros') === g.id);
+        return (
+          <section id={g.id} style="margin-top:40px">
+            <h2>{g.titulo} <span class="muted" style="font-weight:400;font-size:1rem">({lista.length})</span></h2>
+            {lista.length === 0 && <p class="muted">{g.vazio}</p>}
+            {lista.map((p) => {
+              const href = link(p);
+              return (
+                <article class="pub">
+                  <p style="margin:0 0 4px"><span class="pill">{tipos[p.tipo] ?? p.tipo}</span><span class="pill">{p.ano}</span></p>
+                  <h3>{href ? <a href={href} rel="noopener">{p.titulo}</a> : p.titulo}</h3>
+                  <p class="authors">{p.autores.join(', ')}</p>
+                  <p class="venue">{p.instituicao}{p.instituicao && p.local ? ' · ' : ''}{p.local}</p>
+                  {p.resumo && <p>{p.resumo}</p>}
+                  {p.papel_secclass && <p class="role"><strong>Papel do SECClasS:</strong> {p.papel_secclass}</p>}
+                  {!href && <p class="meta muted" style="font-size:.85rem">Documento em migração para o novo site.</p>}
+                </article>
+              );
+            })}
+          </section>
+        );
+      })}
+    </div>
+  </section>
+</Base>

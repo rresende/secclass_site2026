@@ -1,0 +1,11 @@
+PDFs a copiar do servidor antigo (wp-content/uploads) para esta pasta.
+Copie APENAS ficheiros .pdf, depois de os verificar (o servidor antigo foi comprometido).
+
+Guia_Utilizacao_SECClasS_V1.0.pdf        (2022/02)
+Guia_Utilizacao_SECClasS_BIT_v1.0.pdf    (2022/02)
+Regras_modelacao_objetos_BIM.pdf         (2021/09)
+Projeto-SECCLASS-PTBIM-2022.pdf          (2022/07/Projeto-SECCLASS-–-PTBIM-2022.pdf, renomear)
+Sistemas-Classificacao-LNEC-PTBIM-2022.pdf (2022/07)
+A-Abordagem-LEVELs-PTBIM-2022.pdf        (2022/07)
+PDTs-SECClasS-PTBIM-2022.pdf             (2022/07)
+CEES2021-Paper-ID10_VF.pdf               (2022/01)

@@ -1,0 +1,99 @@
+# =====================================================================
+#  Trabalhos que usam ou referem o SECClasS
+#
+#  Este ficheiro é alimentado de 15 em 15 dias pelo agente
+#  (agent/procurar_publicacoes.py), que abre um pull request com
+#  entradas no estado "proposta". Só aparecem no site as entradas com
+#  estado "publicado": reveja, corrija e mude o estado antes de aprovar.
+#
+#  Campos:
+#    titulo, autores (lista), instituicao, local (revista, congresso,
+#    repositório), ano, tipo (artigo | comunicacao | dissertacao |
+#    tese | relatorio | livro), categoria (projeto | terceiros),
+#    resumo, papel_secclass, url (link direto para o trabalho),
+#    ficheiro (opcional: PDF em public/docs/), estado, fonte, adicionado
+# =====================================================================
+
+- titulo: "Projeto SECClasS: o desenvolvimento de um sistema de classificação da construção com componente de sustentabilidade adaptado ao BIM"
+  autores: ["Equipa SECClasS"]
+  instituicao: "Iscte, LNEC, Universidade do Minho, A-Lab, Marta Campos Arquitetura"
+  local: "4.º Congresso Português de Building Information Modelling (PTBIM 2022), Braga"
+  ano: 2022
+  tipo: comunicacao
+  categoria: projeto
+  resumo: ""
+  papel_secclass: "Apresenta o próprio sistema: objetivos, seleção do Uniclass 2015 e adaptação à sustentabilidade."
+  url: ""
+  ficheiro: "docs/Projeto-SECCLASS-PTBIM-2022.pdf"
+  estado: publicado
+  fonte: "site SECClasS (2022)"
+
+- titulo: "Sistemas de classificação de informação da construção adaptados à sustentabilidade: experiência internacional relevante"
+  autores: ["Rodrigo Lima", "Filipa Salvado", "Maria João Falcão Silva", "Paula Couto"]
+  instituicao: "LNEC"
+  local: "4.º Congresso Português de Building Information Modelling (PTBIM 2022), Braga"
+  ano: 2022
+  tipo: comunicacao
+  categoria: projeto
+  resumo: ""
+  papel_secclass: "Estudo de base do projeto: análise comparativa dos sistemas internacionais que fundamentou a escolha do Uniclass."
+  url: ""
+  ficheiro: "docs/Sistemas-Classificacao-LNEC-PTBIM-2022.pdf"
+  estado: publicado
+  fonte: "site SECClasS (2022)"
+
+- titulo: "A abordagem LEVEL(s) adaptada aos sistemas de classificação da informação da construção"
+  autores: ["Rodrigo Lima", "Filipa Salvado", "Maria João Falcão Silva", "Paula Couto"]
+  instituicao: "LNEC"
+  local: "4.º Congresso Português de Building Information Modelling (PTBIM 2022), Braga"
+  ano: 2022
+  tipo: comunicacao
+  categoria: projeto
+  resumo: ""
+  papel_secclass: "Liga os indicadores Level(s) da UE às tabelas de classificação, para análises de sustentabilidade com o SECClasS."
+  url: ""
+  ficheiro: "docs/A-Abordagem-LEVELs-PTBIM-2022.pdf"
+  estado: publicado
+  fonte: "site SECClasS (2022)"
+
+- titulo: "Rumo à definição de 'Product Data Templates' nacionais para aplicação generalizada em contexto BIM: esforços da CT197"
+  autores: ["Mohamad El Sibaii", "José Granja", "Renan Rocha Ribeiro", "Pedro Meda", "Ricardo Pontes Resende", "João dos Santos", "Pedro Lucas Martins", "António Aguiar Costa", "João Poças Martins", "Miguel Azenha"]
+  instituicao: "Universidade do Minho, FEUP, Iscte, IST — CT197"
+  local: "4.º Congresso Português de Building Information Modelling (PTBIM 2022), Braga"
+  ano: 2022
+  tipo: comunicacao
+  categoria: projeto
+  resumo: ""
+  papel_secclass: "Product Data Templates desenvolvidos em articulação com o SECClasS e a CT197."
+  url: ""
+  ficheiro: "docs/PDTs-SECClasS-PTBIM-2022.pdf"
+  estado: publicado
+  fonte: "site SECClasS (2022)"
+
+- titulo: "Construction information classification systems adapted to sustainability: international experience"
+  autores: ["Rodrigo Lima", "Maria João Falcão Silva", "Ana Filipa Salvado", "Paula Couto"]
+  instituicao: "LNEC"
+  local: "CEES 2021 — International Conference on Construction, Energy, Environment and Sustainability, Coimbra"
+  ano: 2021
+  tipo: comunicacao
+  categoria: projeto
+  resumo: ""
+  papel_secclass: "Resultado da tarefa 2 do projeto: seleção do sistema de classificação e adaptação ao Level(s)."
+  url: ""
+  ficheiro: "docs/CEES2021-Paper-ID10_VF.pdf"
+  estado: publicado
+  fonte: "site SECClasS (2022)"
+
+- titulo: "Regras de modelação de objetos BIM"
+  autores: ["Equipa SECClasS"]
+  instituicao: "Projeto SECClasS"
+  local: "Relatório técnico do projeto"
+  ano: 2021
+  tipo: relatorio
+  categoria: projeto
+  resumo: "Especificação técnica para a modelação de objetos BIM adequados a análises de sustentabilidade."
+  papel_secclass: "Define como os objetos BIM são classificados e caracterizados com o SECClasS."
+  url: ""
+  ficheiro: "docs/Regras_modelacao_objetos_BIM.pdf"
+  estado: publicado
+  fonte: "site SECClasS (2021)"

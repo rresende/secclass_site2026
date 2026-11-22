@@ -1,0 +1,51 @@
+name: Procurar publicações (quinzenal)
+
+on:
+  schedule:
+    # Todas as segundas às 05:23 UTC; o primeiro passo só deixa correr nas semanas pares
+    - cron: "23 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  procurar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Só em semanas pares (cadência quinzenal)
+        id: quinzena
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ $(( 10#$(date +%V) % 2 )) -eq 0 ]; then
+            echo "correr=sim" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.quinzena.outputs.correr == 'sim'
+      - uses: actions/setup-python@v5
+        if: steps.quinzena.outputs.correr == 'sim'
+        with:
+          python-version: "3.12"
+      - name: Executar agente
+        if: steps.quinzena.outputs.correr == 'sim'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          pip install -r agent/requirements.txt
+          python agent/procurar_publicacoes.py | tee agente.log
+      - name: Abrir pull request para revisão
+        if: steps.quinzena.outputs.correr == 'sim'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: agente/publicacoes
+          delete-branch: true
+          add-paths: src/data/publicacoes.yml
+          commit-message: "Publicações: propostas do agente"
+          title: "Publicações: novas propostas para revisão"
+          body: |
+            O agente encontrou trabalhos que parecem usar o SECClasS.
+
+            **Antes de aprovar:** abra cada link, confirme autores, resumo e papel do SECClasS,
+            e mude `estado: proposta` para `estado: publicado` nas entradas a aceitar
+            (apague as que não interessam).
+          labels: publicacoes

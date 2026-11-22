@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, url } from '../lib/data.js';
+---
+<Base title="Termos, licença e privacidade">
+  <section class="section" style="padding-top:32px">
+    <div class="wrap" style="max-width:780px">
+      <p class="kicker"><a href={url('/')}>SECClasS</a> / Legal</p>
+      <h1 style="font-size:clamp(1.8rem,4vw,2.4rem)">Termos, licença e privacidade</h1>
+
+      <h2>Licença das tabelas</h2>
+      <p>{site.licenca} <a href={site.licenca_url} rel="noopener">Ler a licença</a>.</p>
+      <p>O Uniclass 2015 é propriedade da NBS. As tabelas Uniformat II são publicadas pelo Construction Specifications Institute; a tradução portuguesa é da Limsen Consulting com a Lipronerg Engenharia.</p>
+      <p>As tabelas são disponibilizadas tal como estão, sem garantia de adequação a um fim específico. A verificação da classificação aplicada em cada projeto é da responsabilidade do utilizador.</p>
+
+      <h2>Privacidade</h2>
+      <p>Este site é estático: não tem formulários, contas de utilizador, cookies nem ferramentas de análise de tráfego, e as fontes tipográficas são servidas a partir do próprio site. O alojamento pode registar dados técnicos de acesso (endereço IP, data e página pedida) para fins de segurança.</p>
+      <p>A página de <a href={url('/pesquisa/')}>pesquisa</a> incorpora a ferramenta alojada em <code>pesquisa.secclass.pt</code>. Os contactos por email são usados apenas para responder ao pedido.</p>
+
+      <h2>Responsável</h2>
+      <p>{site.manutencao} Contacto: <a href={`mailto:${site.contactos.email}`}>{site.contactos.email}</a>.</p>
+    </div>
+  </section>
+</Base>

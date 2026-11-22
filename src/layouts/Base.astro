@@ -1,0 +1,88 @@
+---
+import '@fontsource/heebo/400.css';
+import '@fontsource/heebo/500.css';
+import '@fontsource/heebo/700.css';
+import '../styles/global.css';
+import { site, url } from '../lib/data.js';
+
+interface Props { title?: string; description?: string; }
+const { title, description = site.descricao } = Astro.props;
+const fullTitle = title ? `${title} — ${site.nome}` : `${site.nome} — Sistema de Classificação da Construção`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const nav = [
+  { href: url('/#tabelas'), label: 'Tabelas' },
+  { href: url('/#versoes'), label: 'Versões' },
+  { href: url('/#recursos'), label: 'Recursos' },
+  { href: url('/publicacoes/'), label: 'Publicações' },
+  { href: url('/#projeto'), label: 'Projeto' },
+];
+---
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; frame-src https://pesquisa.secclass.pt; connect-src 'self'; base-uri 'self'; form-action 'none'" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={url('/favicon.svg')} type="image/svg+xml" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="pt_PT" />
+  </head>
+  <body>
+    <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <a class="brand" href={url('/')} aria-label={`${site.nome} — início`}>
+          {site.logo
+            ? <img src={url(site.logo)} alt={site.nome} height="36" />
+            : <span class="wordmark">SEC<span>Clas</span>S</span>}
+        </a>
+        <details class="menu">
+          <summary aria-label="Menu">Menu</summary>
+          <nav aria-label="Principal">
+            {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+            <a class="btn btn-sm" href={url('/pesquisa/')}>Pesquisar</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <slot />
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-grid">
+        <div>
+          <p class="wordmark wordmark-light">SEC<span>Clas</span>S</p>
+          <p class="muted-light">{site.manutencao}</p>
+        </div>
+        <div>
+          <h2 class="footer-h">Contactos</h2>
+          <p><a href={`mailto:${site.contactos.email}`}>{site.contactos.email}</a></p>
+          <p><a href={site.contactos.linkedin} rel="noopener">LinkedIn</a> · <a href={site.contactos.youtube} rel="noopener">YouTube</a> · <a href={site.repositorio_dados} rel="noopener">GitHub</a></p>
+        </div>
+        <div>
+          <h2 class="footer-h">Ligações</h2>
+          {site.rodape_links.map((l) => <p><a href={l.url} rel="noopener">{l.nome}</a></p>)}
+          <p><a href={url('/legal/')}>Termos, licença e privacidade</a></p>
+          <p><a href={url('/arquivo/')}>Arquivo de notícias 2020–2023</a></p>
+        </div>
+        <div>
+          <h2 class="footer-h">Financiado por</h2>
+          {site.projeto.financiador.logo
+            ? <a href={site.projeto.financiador.url} rel="noopener"><img class="funder" src={url(site.projeto.financiador.logo)} alt="EEA Grants — Islândia, Liechtenstein, Noruega" /></a>
+            : <p><a href={site.projeto.financiador.url} rel="noopener">EEA Grants</a><br /><span class="muted-light">Islândia · Liechtenstein · Noruega</span></p>}
+        </div>
+      </div>
+      <div class="wrap footer-legal">
+        <p>{site.licenca} <a href={site.licenca_url} rel="noopener">CC BY-ND 4.0</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
