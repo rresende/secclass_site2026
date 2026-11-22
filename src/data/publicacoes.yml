@@ -248,8 +248,8 @@
   ano: 2021
   tipo: comunicacao
   categoria: projeto
-  resumo: ""
-  papel_secclass: "Apresenta, numa conferência internacional, a experiência do projeto SECClasS no desenvolvimento de um sistema de classificação da construção orientado para a sustentabilidade."
+  resumo: "Descreve os pressupostos para o desenvolvimento de um sistema de classificação da informação da construção (CICS) português otimizado para a sustentabilidade e assente nos princípios da economia circular, com o objetivo de reduzir os resíduos de construção e demolição. Analisa sistemas internacionais — Uniclass 2015 (Reino Unido), OmniClass (América do Norte), CCS (Dinamarca), CoClass (Suécia) e CCI — as normas ISO 12006 e ISO 81346 e o Plano de Ação para a Economia Circular da UE (2020)."
+  papel_secclass: "Apresenta à comunidade internacional os pressupostos do projeto SECClasS e a adaptação de sistemas de classificação internacionais ao contexto português."
   url: "https://doi.org/10.2495/BIM210021"
   ficheiro: ""
   estado: publicado
