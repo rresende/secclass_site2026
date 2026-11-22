@@ -24,7 +24,7 @@ const nav = [
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; frame-src https://pesquisa.secclass.pt; connect-src 'self'; base-uri 'self'; form-action 'self' https://*.list-manage.com" />
+      content={`default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; frame-src ${site.pesquisa_embebida ? 'https://pesquisa.secclass.pt' : "'none'"}; connect-src 'self'; base-uri 'self'; form-action 'self' https://*.list-manage.com`} />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />

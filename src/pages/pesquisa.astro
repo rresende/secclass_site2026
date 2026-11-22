@@ -1,18 +1,31 @@
 ---
 import Base from '../layouts/Base.astro';
 import { site, url } from '../lib/data.js';
+const tabelas = site.downloads.find((d) => d.pagina?.includes('#tabelas'));
 ---
 <Base title="Pesquisa" description="Pesquise os 17 mil termos do SECClasS por código, título em português ou título Uniclass.">
   <section class="section" style="padding-top:32px">
     <div class="wrap">
       <p class="kicker"><a href={url('/')}>SECClasS</a> / Pesquisa</p>
       <h1 style="font-size:clamp(1.6rem,3.5vw,2.2rem)">Pesquisar termos do SECClasS</h1>
-      <p class="intro">Pesquise por código (ex.: <code>Ss_25_10</code>), por título em português ou pelo título original Uniclass, com filtros por tabela e versão.
-        Se a ferramenta não carregar, <a href={site.pesquisa_url} rel="noopener">abra-a numa janela própria</a>.</p>
+      <p class="intro">Pesquise por código (ex.: <code>Ss_25_10</code>), por título em português ou pelo título original Uniclass, com filtros por tabela e versão.</p>
     </div>
-    <div class="wrap">
-      <iframe id="pesquisa-frame" class="search-frame" src={site.pesquisa_url} data-modelo={site.pesquisa_url_termo} title="Ferramenta de pesquisa SECClasS" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    </div>
+    {site.pesquisa_embebida ? (
+      <div class="wrap">
+        <iframe id="pesquisa-frame" class="search-frame" src={site.pesquisa_url} data-modelo={site.pesquisa_url_termo} title="Ferramenta de pesquisa SECClasS" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    ) : (
+      <div class="wrap" style="max-width:860px">
+        <div class="callout">
+          <h3>Ferramenta de pesquisa em manutenção</h3>
+          <p>A ferramenta de pesquisa online está temporariamente indisponível nesta página. Entretanto, pode consultar todos os termos no ficheiro das tabelas, que permite filtrar e procurar por código, título em português ou título Uniclass.</p>
+          <div class="dl" style="margin-bottom:0">
+            <a class="btn" href={tabelas?.descarregar}>Descarregar as tabelas SECClasS (.xlsx)</a>
+            <a class="btn btn-outline" href={url('/ferramentas-bim/#tabelas')}>Como usar o ficheiro</a>
+          </div>
+        </div>
+      </div>
+    )}
   </section>
-  <script is:inline src={url('/js/pesquisa.js')} defer></script>
+  {site.pesquisa_embebida && <script is:inline src={url('/js/pesquisa.js')} defer></script>}
 </Base>
