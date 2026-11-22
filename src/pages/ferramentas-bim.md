@@ -29,6 +29,34 @@ As 13 tabelas do SECClasS (versão 2.0, julho de 2025, correspondente ao Uniclas
 
 Cada termo tem as colunas **Tabela**, **Código** (ex.: `Ss_25_10_30`), **Título SECClasS**, **Nível** (profundidade na hierarquia, de 2 a 5) e **Título Uniclass** (o termo original em inglês). Os termos acrescentados para a realidade portuguesa estão assinalados na coluna Título Uniclass.
 
+**Alterações da versão 2.0** (consulte as [notas de lançamento](../versoes/v2-0/)):
+
+- Foi traduzida a tabela Ma-Materiais.
+- Foram adicionadas traduções dos termos incluídos no Uniclass entre 2022 e abril de 2025, com exceção da tabela Pr-Produtos, onde parte dos novos termos são traduções por IA.
+- Revisão das tabelas e adição de termos específicos para Portugal, por solicitação de colegas portugueses. Estas adições estão identificadas na ferramenta de pesquisa online.
+
+**As 13 tabelas e o número de termos:**
+
+| Código | Tabela | Termos |
+|---|---|---|
+| `Ac` | Atividades | 948 |
+| `Ro` | Agentes | 287 |
+| `Zz` | CAD | 132 |
+| `Co` | Complexos | 417 |
+| `EF` | Elementos/funções | 230 |
+| `En` | Entidades | 596 |
+| `SL` | Espaços/locais | 1 146 |
+| `TE` | Ferramentas e equipamentos | 882 |
+| `FI` | Formas de informação | 94 |
+| `PM` | Gestão de projeto | 1 105 |
+| `Ma` | Materiais | 447 |
+| `Pr` | Produtos | 8 421 |
+| `Ss` | Sistemas | 2 706 |
+
+As tabelas Riscos e Propriedades serão traduzidas numa versão futura. Conheça a função de cada tabela na [página inicial](../#tabelas).
+
+**Manual e vídeos:** descarregue o [manual do sistema SECClasS](../docs/Guia_Utilizacao_SECClasS_V1.0.pdf) (versão 1.0) e veja os vídeos no [canal YouTube do SECClasS](https://youtube.com/playlist?list=PLijhXZogmBZx7DLQw7l8Wzz74_jvXHJMM).
+
 Para procurar um termo sem descarregar o ficheiro, use a [ferramenta de pesquisa](../pesquisa/). Para usar as tabelas no software de modelação, veja as secções [Revit](#revit) e [Archicad](#archicad).
 
 <h2 id="revit">Tabelas para o Autodesk Revit</h2>

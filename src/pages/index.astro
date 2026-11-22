@@ -98,6 +98,7 @@ const outros = site.downloads.filter((d) => !d.destaque);
           <li>
             <h3>v{ver.numero} <span class="muted" style="font-weight:400">· {ver.data}</span></h3>
             <ul>{ver.alteracoes.map((a) => <li>{a}</li>)}</ul>
+            {ver.notas && <p style="margin:8px 0 0"><a href={url(ver.notas)}>Notas de lançamento completas →</a></p>}
           </li>
         ))}
       </ol>

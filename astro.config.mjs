@@ -8,9 +8,9 @@ const base = process.env.BASE_PATH || '/secclass_site2026';
 
 // Endereços do site WordPress antigo -> novos (preserva links externos)
 const antigos = {
-  '/tabelas': '/#tabelas',
+  '/tabelas': '/ferramentas-bim/#tabelas',
   '/sistemaclassificacao': '/',
-  '/lancamentov2-0': '/#versoes',
+  '/lancamentov2-0': '/versoes/v2-0/',
   '/conhecer-as-tabelas-do-secclass': '/#tabelas',
   '/autodesk-classification-manager': '/ferramentas-bim/#revit',
   '/tabelas-para-o-graphisoft-archicad': '/ferramentas-bim/#archicad',

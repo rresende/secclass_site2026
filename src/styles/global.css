@@ -187,3 +187,8 @@ details.more summary { cursor: pointer; font-weight: 700; color: var(--indigo); 
 .app-links .app-dl { background: var(--sand); border-color: var(--sand); color: var(--navy); }
 .app-links .app-dl:hover { background: #fff; border-color: #fff; color: var(--navy); }
 div.app:hover { transform: none; box-shadow: none; }
+.table-wrap { overflow-x: auto; margin: 12px 0; }
+.prose table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+.prose th, .prose td { border-bottom: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+.prose th { background: var(--bg-soft); color: var(--navy); font-weight: 700; }
+.prose td:nth-child(n+3), .prose th:nth-child(n+3) { text-align: right; }

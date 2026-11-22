@@ -132,6 +132,7 @@ downloads:
 versoes:
   - numero: "2.0"
     data: "julho de 2025"
+    notas: "versoes/v2-0/"
     alteracoes:
       - "Harmonização com o Uniclass 2015 de abril de 2025."
       - "Tradução dos termos acrescentados ao Uniclass entre 2022 e abril de 2025; na tabela Pr-Produtos, parte dos novos termos são traduções por IA (em revisão)."
