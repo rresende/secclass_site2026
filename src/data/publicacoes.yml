@@ -15,6 +15,48 @@
 
 # --------------------------- Trabalhos que usam o SECClasS ---------------------------
 
+- titulo: "Plataforma BIM para execução de verificações automáticas no âmbito do licenciamento municipal"
+  autores: ["Bruno Souza Muniz"]
+  instituicao: "Universidade do Minho, Escola de Engenharia"
+  local: "Dissertação de Mestrado em Construção e Reabilitação Sustentáveis, orientação de Miguel Azenha e José Granja"
+  ano: 2023
+  tipo: dissertacao
+  categoria: terceiros
+  resumo: "Desenvolve, com ferramentas de código aberto, uma plataforma protótipo para criar regulamentos interpretáveis por máquina através de programação visual por blocos e executar verificações de conformidade sobre modelos IFC, com vista à automatização do licenciamento municipal."
+  papel_secclass: "Usa o SECClasS para classificar os objetos IFC necessários às verificações (vestíbulos, corredores, instalações sanitárias, despensas…), com o mapeamento para a tabela SL — Espaços/locais; propõe novas classes para entidades do licenciamento sem correspondência, como parcelas e fogos."
+  url: "https://repositorium.uminho.pt/entities/publication/db0f465e-9d84-4bc0-8bc2-ec7ed18c21de"
+  ficheiro: ""
+  estado: publicado
+  fonte: "RepositóriUM (texto integral)"
+
+- titulo: "BIM no controlo de segurança de barragens de betão: uma ferramenta de apoio às inspeções visuais"
+  autores: ["Carlos Serra", "João Conde Silva", "José Granja", "Miguel Azenha"]
+  instituicao: "LNEC; Universidade do Minho"
+  local: "5.º Congresso Português de Building Information Modelling (PTBIM 2024), vol. 1, UMinho Editora"
+  ano: 2024
+  tipo: comunicacao
+  categoria: terceiros
+  resumo: "Propõe a implementação BIM nas inspeções visuais de barragens de betão: formulários digitais para o registo de ocorrências e a sua exportação sistematizada para o modelo 3D, regras de modelação da barragem na fase de exploração e a definição e classificação de objetos BIM para a estrutura, as ocorrências e os instrumentos."
+  papel_secclass: "Segue as Regras de modelação de objetos BIM publicadas no âmbito do projeto SECClasS e da CT197 na nomenclatura e organização das propriedades dos objetos."
+  url: "https://doi.org/10.21814/uminho.ed.142.12"
+  ficheiro: ""
+  estado: publicado
+  fonte: "PDF das atas"
+
+- titulo: "Contribution to the revision of the Portuguese rules of measurement towards a standardized BIM-based industry"
+  autores: ["Laura Gomes de Almeida"]
+  instituicao: "Universidade do Minho; Limsen Consulting"
+  local: "Dissertação do European Master in Building Information Modelling (BIM A+), orientação de Miguel Azenha; tutores na empresa Filipe Lima e Sébastien Roux"
+  ano: 2023
+  tipo: dissertacao
+  categoria: terceiros
+  resumo: "Analisa as regras de medição portuguesas (CSRMC) e o seu alinhamento com o BIM, com entrevistas a entidades do setor e dois casos de estudo (arquitetura e estruturas; MEP), e propõe diretrizes para medições baseadas em modelos. Está na origem da comunicação ao PTBIM 2024 sobre o mesmo tema."
+  papel_secclass: "Identifica o SECClasS como referência nacional para estruturar a WBS e codificar os modelos, e recomenda fazer corresponder os códigos da WBS do CSRMC ao SECClasS."
+  url: "https://repositorium.uminho.pt/entities/publication/99202bbe-fc6a-4ed6-a18f-3411068f69de"
+  ficheiro: ""
+  estado: publicado
+  fonte: "RepositóriUM (texto integral)"
+
 - titulo: "Otimização do planeamento de demolição baseado em BIM: extração de precedência de elementos construtivos e algoritmos genéticos"
   autores: ["André Mantelatto", "Melody Njuguna", "Manuel Parente", "José Granja", "Miguel Azenha"]
   instituicao: "Escola de Engenharia, Universidade do Minho"
@@ -184,6 +226,20 @@
   fonte: "site SECClasS (2022)"
 
 # --------------------------- Publicações do projeto ---------------------------
+
+- titulo: "Regras de modelação de objetos BIM e contributos para modelos de dados de produtos"
+  autores: ["Luciana Sobral Borges de Miranda"]
+  instituicao: "Universidade do Minho, Escola de Engenharia"
+  local: "Dissertação de Mestrado em Construção e Reabilitação Sustentáveis, orientação de Miguel Azenha"
+  ano: 2023
+  tipo: dissertacao
+  categoria: projeto
+  resumo: "Contribui para a normalização de objetos BIM em Portugal com a elaboração do documento Regras de Modelação de Objetos BIM e com a criação de Modelos de Dados de Produtos (PDT) nacionais para uma caldeira a gás e uma unidade de tijolo de argila."
+  papel_secclass: "O documento Regras de Modelação de Objetos BIM foi desenvolvido em colaboração entre o projeto SECClasS, a CT197 e a Universidade do Minho; os PDT contribuem para a plataforma pdts.pt, no contexto dos projetos SECClasS e REV@Construction."
+  url: "https://repositorium.uminho.pt/entities/publication/d3d3ceb3-44e1-4347-9882-945f8127ce8a"
+  ficheiro: ""
+  estado: publicado
+  fonte: "RepositóriUM (texto integral)"
 
 - titulo: "Projeto SECClasS – O desenvolvimento de um sistema de classificação da construção com componente de sustentabilidade adaptado ao BIM"
   autores: ["Angie Mendez", "Daniel Cale", "Filipa Salvado", "Inês Almeida", "João Manuel Miranda", "José Granja", "Luís Fonseca", "Manoel Wagner de Mello", "Maria João Falcão Silva", "Marta Campos", "Miguel Azenha", "Mohamad El Sibaii", "Paula Couto", "Ricardo Pontes Resende", "Rodrigo Tavares Lima", "Sara Parece", "Tiago Pedro"]
