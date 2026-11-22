@@ -15,6 +15,34 @@
 
 # --------------------------- Trabalhos que usam o SECClasS ---------------------------
 
+- titulo: "Gestão de infraestruturas públicas através do BIM: modelação de túneis ferroviários das Infraestruturas de Portugal"
+  autores: ["Inês Caetano", "Débora Pinto", "João Silva", "Yessica Barbosa", "Luís Sanhudo", "João Poças Martins", "Margarida Amândio", "Miguel Azenha", "José Granja", "Mohammad El Sibaii", "Hugo Patrício"]
+  instituicao: "BUILT CoLAB; INESC-ID; FEUP; Universidade do Minho; Infraestruturas de Portugal"
+  local: "Revista de Ativos de Engenharia, vol. 2, n.º 1, pp. 35-48"
+  ano: 2024
+  tipo: artigo
+  categoria: terceiros
+  resumo: "Desenvolve uma extensão para plataformas BIM que gere um repositório de modelos de túneis ferroviários existentes da Infraestruturas de Portugal, com interface gráfica, a partir de informação alfanumérica e geométrica dispersa, e discute as vantagens de centralizar a informação num modelo 3D partilhado para a comunicação, a decisão e o planeamento de inspeções e intervenções."
+  papel_secclass: "O SECClasS é o sistema de classificação adotado na normalização da informação, nos PDT e nos objetos BIM: todos os elementos essenciais dos túneis (camada de sustimento, carril, travessa, plataforma…) foram associados a produtos SECClasS e a classes IFC; as anomalias, sem classe própria, foram classificadas em Ss_37_50."
+  url: "https://doi.org/10.29073/rae.v2i1.796"
+  ficheiro: ""
+  estado: publicado
+  fonte: "PDF da revista"
+
+- titulo: "Implementação do BIM na gestão e manutenção dos edifícios: contributo para a otimização do fluxo de trabalho"
+  autores: ["Raquel Elisa Graçoeiro Rodrigues"]
+  instituicao: "Universidade do Minho, Escola de Engenharia"
+  local: "Dissertação de Mestrado em Engenharia Civil, orientação de João Pedro Couto"
+  ano: 2023
+  tipo: dissertacao
+  categoria: terceiros
+  resumo: "Estuda a utilização do BIM na gestão e manutenção de edifícios: ambientes comuns de dados (CDE), sistemas de classificação, parametrização da informação BIM e o fluxo de processamento e operacionalização da informação para a gestão de ativos (FM)."
+  papel_secclass: "Apresenta o SECClasS no estado da arte, a par do Uniclass e do Uniformat, descrevendo as tabelas e a sua organização hierárquica, e indica-o como norma de classificação a usar na estruturação da informação de manutenção."
+  url: "https://repositorium.uminho.pt/entities/publication/02663ca6-6da3-4e01-a99a-8c0b093d174d"
+  ficheiro: ""
+  estado: publicado
+  fonte: "RepositóriUM (texto integral)"
+
 - titulo: "Plataforma BIM para execução de verificações automáticas no âmbito do licenciamento municipal"
   autores: ["Bruno Souza Muniz"]
   instituicao: "Universidade do Minho, Escola de Engenharia"
