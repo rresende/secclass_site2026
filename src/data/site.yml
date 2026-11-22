@@ -87,33 +87,31 @@ tabelas_nota: >-
 #  Downloads (ficheiros alojados nas releases do repositório de dados)
 # ---------------------------------------------------------------------
 downloads:
+  # destaque: true -> aparece nos cartões grandes das Aplicações
+  # url: link direto (ficheiro) | pagina: página do site com instruções
   - titulo: "Tabelas SECClasS v2.0"
     formato: "Excel (.xlsx)"
     descricao: "As 13 tabelas, com código, título em português e título Uniclass."
     url: "https://github.com/rresende/secclass/releases/download/V2.0/Tabelas.SECClasS.V2.0.xlsx"
     destaque: true
   - titulo: "Tabelas para Autodesk Revit"
-    formato: "Excel (.xlsx)"
+    formato: "Excel (.xlsx) + instruções"
     descricao: "Para o Autodesk Standardized Data Tool for Revit (antigas BIM Interoperability Tools)."
-    url: "https://github.com/rresende/secclass/releases/download/V2.0/SECClasS_V2.0_AutodeskInteroperabilityTools.xlsx"
+    pagina: "ferramentas-bim/#revit"
     destaque: true
   - titulo: "Tabelas para Graphisoft Archicad"
-    formato: "XML"
+    formato: "XML + instruções"
     descricao: "Tabelas no formato de classificação do Archicad, fornecidas pela Infor."
-    url: "https://github.com/rresende/secclass/releases/download/V2.0/SECClasS.V2.0.para.Archicad.xml"
+    pagina: "ferramentas-bim/#archicad"
     destaque: true
   - titulo: "Uniformat II em português"
-    formato: "Excel (.xlsx)"
+    formato: "Excel (.xlsx) e tabela para Revit"
     descricao: "654 entradas, versões EN e PT. Tradução da Limsen Consulting com a Lipronerg Engenharia."
-    url: "https://github.com/rresende/secclass/releases/download/v1.0_uniformat/UniformatII_Portugues_V1.0.xlsx"
-  - titulo: "Uniformat II para Autodesk Revit"
-    formato: "Excel (.xlsx)"
-    descricao: "Tabela Uniformat II em português para as ferramentas de classificação da Autodesk."
-    url: "https://github.com/rresende/secclass/releases/download/v1.0_uniformat/UniformatII_Portugues_V1.0_AutodeskClassificationTools.xlsx"
-  - titulo: "Exportação de Revit para IFC"
-    formato: "Guia e ficheiros de configuração"
-    descricao: "Parâmetros e mapeamento para exportar a classificação SECClasS em IFC."
-    url: ""
+    pagina: "ferramentas-bim/#uniformat"
+  - titulo: "Exportação para IFC"
+    formato: "Ficheiros de configuração + instruções"
+    descricao: "Parâmetros e mapeamento para exportar a classificação SECClasS em IFC, a partir do Revit e do Archicad."
+    pagina: "ferramentas-bim/#ifc"
     estado: "Em actualização"
 
 # ---------------------------------------------------------------------
@@ -182,7 +180,7 @@ parceiros:
   - { nome: "LNEC — Laboratório Nacional de Engenharia Civil", url: "https://www.lnec.pt/", descricao: "Instituto público de I&D em todos os domínios da Engenharia Civil." }
   - { nome: "Universidade do Minho", url: "https://www.uminho.pt/", descricao: "Departamento de Engenharia Civil; coordenação do Curso Português de BIM." }
   - { nome: "A-Lab", url: "https://a-lab.no/", descricao: "Atelier de arquitetura de Oslo, com estúdio em Portugal; referência em BIM e desenvolvimento urbano sustentável." }
-  - { nome: "Marta Campos Arquitetura", url: "https://martacampos.pt/", descricao: "Atelier do Porto pioneiro no uso de BIM na reabilitação sustentável." }
+  - { nome: "Marta Campos Arquitetura", url: "https://magnetico.com.pt/", descricao: "Atelier do Porto pioneiro no uso de BIM na reabilitação sustentável." }
 
 equipa:
   - { nome: "Ricardo Pontes Resende", inst: "Iscte", papel: "Coordenador" }

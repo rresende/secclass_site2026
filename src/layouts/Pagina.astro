@@ -1,0 +1,16 @@
+---
+// Layout para páginas de texto escritas em Markdown (src/pages/*.md).
+import Base from './Base.astro';
+import { url } from '../lib/data.js';
+const { frontmatter } = Astro.props;
+---
+<Base title={frontmatter.title} description={frontmatter.description}>
+  <section class="section prose" style="padding-top:32px">
+    <div class="wrap" style="max-width:860px">
+      <p class="kicker"><a href={url('/')}>SECClasS</a> / {frontmatter.title}</p>
+      <h1 style="font-size:clamp(1.8rem,4vw,2.6rem)">{frontmatter.title}</h1>
+      {frontmatter.intro && <p class="intro">{frontmatter.intro}</p>}
+      <slot />
+    </div>
+  </section>
+</Base>

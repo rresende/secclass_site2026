@@ -34,7 +34,7 @@ const outros = site.downloads.filter((d) => !d.destaque);
     <div class="wrap">
       <p class="kicker">Aplicações</p>
       <h2>Pesquisar, descarregar e usar no software BIM</h2>
-      <p class="intro">Versão {v.numero}. Todos os ficheiros estão versionados no <a href={site.repositorio_dados} rel="noopener">repositório público do SECClasS</a>.</p>
+      <p class="intro">Todos os ficheiros estão versionados no <a href={site.repositorio_dados} target="_blank" rel="noopener">repositório público do SECClasS</a>.</p>
       <div class="apps">
         <a class="app" href={url('/pesquisa/')}>
           <span class="app-ico" aria-hidden="true">⌕</span>
@@ -43,20 +43,23 @@ const outros = site.downloads.filter((d) => !d.destaque);
           <span class="app-cta">Abrir pesquisa →</span>
         </a>
         {apps.map((d, i) => (
-          <a class="app" href={d.url} rel="noopener">
+          <a class="app" href={d.pagina ? url(d.pagina) : d.url} rel="noopener">
             <span class="app-ico" aria-hidden="true">{['▦', 'R', 'A'][i] ?? '↓'}</span>
             <h3>{d.titulo}</h3>
             <p>{d.descricao}</p>
-            <span class="app-cta">Descarregar · {d.formato} →</span>
+            <span class="app-cta">{d.pagina ? 'Ficheiros e instruções' : `Descarregar · ${d.formato}`} →</span>
           </a>
         ))}
       </div>
 
       <h3 style="margin-top:40px">Outros ficheiros</h3>
       <div class="grid">
-        {outros.map((d) => d.url
-          ? <a class="card card-link" href={d.url} rel="noopener"><span class="pill">{d.formato}</span><h3 style="margin-top:10px">{d.titulo}</h3><p>{d.descricao}</p></a>
-          : <div class="card"><span class="pill pill-warn">{d.estado}</span><h3 style="margin-top:10px">{d.titulo}</h3><p>{d.descricao}</p></div>)}
+        {outros.map((d) => (
+          <a class="card card-link" href={d.pagina ? url(d.pagina) : d.url} rel="noopener">
+            <span class="pill">{d.formato}</span>{d.estado && <span class="pill pill-warn">{d.estado}</span>}
+            <h3 style="margin-top:10px">{d.titulo}</h3><p>{d.descricao}</p>
+          </a>
+        ))}
       </div>
     </div>
   </section>
@@ -64,8 +67,8 @@ const outros = site.downloads.filter((d) => !d.destaque);
   <section class="section section-soft" id="tabelas">
     <div class="wrap">
       <p class="kicker">Estrutura</p>
-      <h2>As {site.tabelas.length} tabelas do SECClasS</h2>
-      <p class="intro">Os prefixos (Co, En, Ss, Pr…) são os do Uniclass: a correspondência entre os dois sistemas mantém-se através dos códigos. As sete primeiras formam uma hierarquia do macro ao micro (ambientes, sistemas e produtos); as restantes apoiam a gestão da informação.</p>
+      <h2>As tabelas do SECClasS</h2>
+      <p class="intro">Os prefixos (Co, En, Ss, Pr…) são os do Uniclass: a correspondência entre os dois sistemas mantém-se através dos códigos. As sete primeiras tabelas formam uma hierarquia do macro ao micro (Complexos, Entidades, Espaços e Locais, Elementos e Funções, Sistemas, Produtos e Materiais); as restantes apoiam a gestão da informação.</p>
       <div class="tables">
         {site.tabelas.map((t) => (
           <div class="tcard">
@@ -85,7 +88,7 @@ const outros = site.downloads.filter((d) => !d.destaque);
         <p class="kicker">Atualizações</p>
         <h2>Histórico de versões</h2>
         <p class="intro">A versão {v.numero} corresponde ao {v.base} e foi produzida por {v.autores}.</p>
-        <p class="intro">Encontrou um termo em falta ou uma tradução a melhorar? Use a <a href={url('/pesquisa/')}>ferramenta de pesquisa</a>, abra uma <a href={`${site.repositorio_dados}/issues`} rel="noopener">issue no GitHub</a> ou escreva para <Email email={site.contactos.email_sugestoes} subject="Sugestão SECClasS" />.</p>
+        <p class="intro">Encontrou um termo em falta ou uma tradução a melhorar? Escreva para <Email email={site.contactos.email} subject="Sugestão SECClasS" />.</p>
       </div>
       <ol class="timeline">
         {site.versoes.map((ver) => (
@@ -118,7 +121,7 @@ const outros = site.downloads.filter((d) => !d.destaque);
     <div class="wrap">
       <p class="kicker">Investigação</p>
       <h2>Trabalhos que aplicam SECClasS</h2>
-      <p class="intro">Artigos, comunicações, dissertações e relatórios que aplicam ou referem o SECClasS. A lista é atualizada de 15 em 15 dias a partir de repositórios universitários e congressos, com validação humana antes de publicar.</p>
+      <p class="intro">Recolha de artigos científicos, comunicações, dissertações e relatórios que aplicam ou referem o SECClasS. A lista tem origem na pesquisa de repositórios universitários portugueses, congressos de BIM e bases bibliográficas.</p>
       <div>
         {recentes.map((p) => (
           <article class="pub">
@@ -139,7 +142,6 @@ const outros = site.downloads.filter((d) => !d.destaque);
         <p class="kicker" style="color:var(--sand)">Quem mantém</p>
         <h2>Um sistema aberto e em atualização</h2>
         <p style="font-size:1.15rem">O SECClasS é mantido pela <a href={site.escola.url} rel="noopener">Escola de Tecnologias Digitais Aplicadas do Iscte Sintra</a>, com contributos técnicos da comunidade.</p>
-        <p class="muted-light">Propostas de novos termos, correções de tradução e ficheiros para software BIM são revistos e integrados em versões numeradas, com registo público de alterações. <a href={`${site.repositorio_dados}/issues/new`} rel="noopener">Propor uma alteração →</a></p>
       </div>
       <Newsletter />
     </div>

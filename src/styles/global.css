@@ -165,3 +165,15 @@ details.more summary { cursor: pointer; font-weight: 700; color: var(--indigo); 
 .nl-form input { font: inherit; padding: 10px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.95); color: var(--ink); }
 .nl-form button { justify-self: start; cursor: pointer; }
 .legal h2 { font-size: 1.3rem; margin-top: 28px; }
+
+/* Páginas de texto (Markdown) */
+.prose h2 { margin-top: 48px; padding-top: 8px; border-top: 1px solid var(--line); }
+.prose h3 { margin-top: 28px; }
+.prose img { border: 1px solid var(--line); border-radius: var(--radius); margin: 12px 0; }
+.prose li { margin: 4px 0; }
+.prose code { background: var(--bg-soft); padding: 1px 6px; border-radius: 4px; font-size: .9em; }
+.prose hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0 20px; }
+.toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 16px; }
+.toc a { text-decoration: none; padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; font-weight: 500; }
+.toc a:hover { border-color: var(--accent); }
+.dl { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
