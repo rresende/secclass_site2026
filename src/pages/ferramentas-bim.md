@@ -89,7 +89,7 @@ As tabelas no formato XML e o vídeo tutorial são fornecidos pela [Infor](https
 
 <p><span class="pill pill-warn">Em actualização</span></p>
 
-O IFC (Industry Foundation Classes) é uma descrição digital normalizada do ambiente construído, incluindo edifícios e infraestruturas. É uma norma internacional aberta (ISO 16739-1:2018), independente do fornecedor de software, e o principal produto técnico da [buildingSMART International](https://www.buildingsmart.org/) para a promoção do openBIM®.
+O IFC (Industry Foundation Classes) é uma descrição digital normalizada do ambiente construído, incluindo edifícios e infraestruturas. É uma norma internacional aberta ([ISO 16739-1:2024](https://www.iso.org/standard/84123.html)), independente do fornecedor de software, e o principal produto técnico da [buildingSMART International](https://www.buildingsmart.org/) para a promoção do openBIM®.
 
 ### Exportação de Revit para IFC
 
