@@ -21,6 +21,11 @@ escola:
   url: "https://www.iscte-iul.pt/iscte/escolas/escola-tecnologias-digitais-aplicadas/introducao"
 
 pesquisa_url: "https://pesquisa.secclass.pt/"
+# Pesquisa rápida (caixa na página principal). Quando a aplicação pesquisa.secclass.pt
+# aceitar um termo no endereço, indique aqui o modelo do URL com {termo}, por exemplo:
+#   pesquisa_url_termo: "https://pesquisa.secclass.pt/pesquisa?q={termo}"
+# Enquanto estiver vazio, a caixa mostra só o botão para abrir a ferramenta.
+pesquisa_url_termo: ""
 repositorio_dados: "https://github.com/rresende/secclass"
 repositorio_site: "https://github.com/rresende/secclass_site2026"
 

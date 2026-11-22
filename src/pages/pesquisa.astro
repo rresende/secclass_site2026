@@ -11,7 +11,8 @@ import { site, url } from '../lib/data.js';
         Se a ferramenta não carregar, <a href={site.pesquisa_url} rel="noopener">abra-a numa janela própria</a>.</p>
     </div>
     <div class="wrap">
-      <iframe class="search-frame" src={site.pesquisa_url} title="Ferramenta de pesquisa SECClasS" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <iframe id="pesquisa-frame" class="search-frame" src={site.pesquisa_url} data-modelo={site.pesquisa_url_termo} title="Ferramenta de pesquisa SECClasS" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </div>
   </section>
+  <script is:inline src={url('/js/pesquisa.js')} defer></script>
 </Base>

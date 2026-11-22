@@ -35,13 +35,23 @@ const outros = site.downloads.filter((d) => !d.destaque);
       <p class="kicker">Aplicações</p>
       <h2>Pesquisar, descarregar e usar no software BIM</h2>
       <p class="intro">Todos os ficheiros estão versionados no <a href={site.repositorio_dados} target="_blank" rel="noopener">repositório público do SECClasS</a>.</p>
-      <div class="apps">
-        <div class="app">
-          <span class="app-ico" aria-hidden="true">⌕</span>
-          <h3><a class="app-title" href={url('/pesquisa/')}>Pesquisa</a></h3>
+      <div class="searchbox">
+        <div class="searchbox-text">
+          <h3>Pesquisa</h3>
           <p>Procure qualquer termo por código, título em português ou título Uniclass, com filtros por tabela e versão.</p>
-          <div class="app-links"><a class="app-dl" href={url('/pesquisa/')}>Abrir pesquisa&nbsp;→</a></div>
         </div>
+        {site.pesquisa_url_termo ? (
+          <form class="searchbox-form" action={url('/pesquisa/')} method="get" role="search">
+            <label class="sr-only" for="q">Termo a pesquisar</label>
+            <input id="q" name="q" type="search" placeholder="Ex.: parede, Ss_25_10, door…" required />
+            <button class="btn" type="submit">Pesquisar</button>
+            <a class="searchbox-link" href={url('/pesquisa/')}>Abrir a ferramenta&nbsp;→</a>
+          </form>
+        ) : (
+          <a class="btn" href={url('/pesquisa/')}>Abrir a ferramenta de pesquisa&nbsp;→</a>
+        )}
+      </div>
+      <div class="apps">
         {apps.map((d) => (
           <div class="app">
             <span class="app-ico" aria-hidden="true">{d.icone ?? '↓'}</span>{d.estado && <span class="app-badge">{d.estado}</span>}
