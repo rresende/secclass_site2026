@@ -1,16 +1,35 @@
 ---
 layout: ../layouts/Pagina.astro
-title: Usar o SECClasS no software BIM
-description: Tabelas do SECClasS para Autodesk Revit e Graphisoft Archicad, Uniformat II em português e exportação da classificação para IFC.
+title: Tabelas e ferramentas BIM
+description: Tabelas do SECClasS em Excel, para Autodesk Revit e Graphisoft Archicad, Uniformat II em português e exportação da classificação para IFC.
 intro: Ficheiros e instruções para classificar modelos BIM com o SECClasS. Todos os ficheiros correspondem à versão 2.0.
 ---
 
 <nav class="toc" aria-label="Nesta página">
+  <a href="#tabelas">Tabelas SECClasS</a>
   <a href="#revit">Autodesk Revit</a>
   <a href="#archicad">Graphisoft Archicad</a>
   <a href="#ifc">Exportação para IFC</a>
   <a href="#uniformat">Uniformat II</a>
 </nav>
+
+<h2 id="tabelas">Tabelas SECClasS</h2>
+
+As 13 tabelas do SECClasS (versão 2.0, julho de 2025, correspondente ao Uniclass 2015 de abril de 2025) num único ficheiro Excel, com 17 411 termos.
+
+<div class="dl">
+  <a class="btn" href="https://github.com/rresende/secclass/releases/download/V2.0/Tabelas.SECClasS.V2.0.xlsx">Descarregar as tabelas SECClasS v2.0 (.xlsx)</a>
+</div>
+
+**Como está organizado o ficheiro:**
+
+- a folha `Introdução` apresenta o sistema e a versão;
+- a folha `Todas_Tabelas` junta todos os termos numa só lista, útil para filtrar ou procurar;
+- há uma folha por tabela: `Co-Complexos`, `En-Entidades`, `Ac-Atividades`, `SL-Espaços&Locais`, `EF-Elementos&Funções`, `Ss-Sistemas`, `Pr-Produtos`, `Ma-Materiais`, `FI-FormasInformação`, `PM-GestãoProjeto`, `Ro-Agentes`, `TE-Ferramentas&Equipamentos` e `Zz-CAD&Modelação`.
+
+Cada termo tem as colunas **Tabela**, **Código** (ex.: `Ss_25_10_30`), **Título SECClasS**, **Nível** (profundidade na hierarquia, de 2 a 5) e **Título Uniclass** (o termo original em inglês). Os termos acrescentados para a realidade portuguesa estão assinalados na coluna Título Uniclass.
+
+Para procurar um termo sem descarregar o ficheiro, use a [ferramenta de pesquisa](../pesquisa/). Para usar as tabelas no software de modelação, veja as secções [Revit](#revit) e [Archicad](#archicad).
 
 <h2 id="revit">Tabelas para o Autodesk Revit</h2>
 

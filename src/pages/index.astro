@@ -40,19 +40,19 @@ const outros = site.downloads.filter((d) => !d.destaque);
           <span class="app-ico" aria-hidden="true">⌕</span>
           <h3>Pesquisa</h3>
           <p>Procure qualquer termo por código, título em português ou título Uniclass, com filtros por tabela e versão.</p>
-          <span class="app-cta">Abrir pesquisa →</span>
+          <span class="app-cta">Abrir pesquisa&nbsp;→</span>
         </a>
         {apps.map((d, i) => (
           <a class="app" href={d.pagina ? url(d.pagina) : d.url} rel="noopener">
-            <span class="app-ico" aria-hidden="true">{['▦', 'R', 'A'][i] ?? '↓'}</span>
+            <span class="app-ico" aria-hidden="true">{d.icone ?? '↓'}</span>{d.estado && <span class="app-badge">{d.estado}</span>}
             <h3>{d.titulo}</h3>
             <p>{d.descricao}</p>
-            <span class="app-cta">{d.pagina ? 'Ficheiros e instruções' : `Descarregar · ${d.formato}`} →</span>
+            <span class="app-cta">{d.pagina ? 'Ficheiros e instruções' : `Descarregar · ${d.formato}`}&nbsp;→</span>
           </a>
         ))}
       </div>
 
-      <h3 style="margin-top:40px">Outros ficheiros</h3>
+      <h3 style="margin-top:40px">Outros sistemas</h3>
       <div class="grid">
         {outros.map((d) => (
           <a class="card card-link" href={d.pagina ? url(d.pagina) : d.url} rel="noopener">
@@ -120,7 +120,7 @@ const outros = site.downloads.filter((d) => !d.destaque);
   <section class="section" id="publicacoes">
     <div class="wrap">
       <p class="kicker">Investigação</p>
-      <h2>Trabalhos que aplicam SECClasS</h2>
+      <h2>Trabalhos que aplicam o SECClasS</h2>
       <p class="intro">Recolha de artigos científicos, comunicações, dissertações e relatórios que aplicam ou referem o SECClasS. A lista tem origem na pesquisa de repositórios universitários portugueses, congressos de BIM e bases bibliográficas.</p>
       <div>
         {recentes.map((p) => (

@@ -144,8 +144,8 @@ details.more summary { cursor: pointer; font-weight: 700; color: var(--indigo); 
 .pub .links { display: flex; gap: 14px; margin: 6px 0 0; font-weight: 700; font-size: .95rem; }
 
 /* Aplicações em destaque */
-.apps { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); }
-.app { display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: inherit; background: linear-gradient(160deg, var(--navy), var(--indigo)); border-radius: 14px; padding: 24px; min-height: 230px; transition: transform .15s, box-shadow .15s; }
+.apps { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 196px), 1fr)); }
+.app { position: relative; display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: inherit; background: linear-gradient(160deg, var(--navy), var(--indigo)); border-radius: 14px; padding: 22px 20px; min-height: 230px; transition: transform .15s, box-shadow .15s; }
 .app:hover { color: inherit; transform: translateY(-3px); box-shadow: 0 14px 30px rgba(44,44,84,.25); }
 .app h3 { color: #fff; font-size: 1.25rem; margin: 6px 0 2px; }
 .app p { color: rgba(255,255,255,.82); margin: 0; font-size: .97rem; flex: 1; }
@@ -177,3 +177,5 @@ details.more summary { cursor: pointer; font-weight: 700; color: var(--indigo); 
 .toc a { text-decoration: none; padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; font-weight: 500; }
 .toc a:hover { border-color: var(--accent); }
 .dl { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+.app-badge { position: absolute; top: 18px; right: 18px; font-size: .75rem; font-weight: 700; background: var(--sand); color: var(--navy); padding: 3px 8px; border-radius: 6px; }
+.app-ico { font-size: 1.1rem; }

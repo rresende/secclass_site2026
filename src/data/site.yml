@@ -46,6 +46,9 @@ contactos:
   email_sugestoes: "ricardo.resende@iscte-iul.pt"
   youtube: "https://youtube.com/playlist?list=PLijhXZogmBZx7DLQw7l8Wzz74_jvXHJMM"
 
+# Data da última revisão da lista de publicações (aparece na página Publicações)
+publicacoes_revisao: "22 de novembro de 2026"
+
 rodape_links:
   - nome: "construcaodigital.pt"
     url: "https://construcaodigital.pt"
@@ -87,32 +90,37 @@ tabelas_nota: >-
 #  Downloads (ficheiros alojados nas releases do repositório de dados)
 # ---------------------------------------------------------------------
 downloads:
-  # destaque: true -> aparece nos cartões grandes das Aplicações
-  # url: link direto (ficheiro) | pagina: página do site com instruções
-  - titulo: "Tabelas SECClasS v2.0"
-    formato: "Excel (.xlsx)"
+  # destaque: true -> cartões grandes das Aplicações (por esta ordem)
+  # icone: letra ou símbolo do cartão | url: link direto | pagina: página do site
+  - titulo: "Tabelas SECClasS"
+    icone: "▦"
+    formato: "Excel (.xlsx) + instruções"
     descricao: "As 13 tabelas, com código, título em português e título Uniclass."
-    url: "https://github.com/rresende/secclass/releases/download/V2.0/Tabelas.SECClasS.V2.0.xlsx"
+    pagina: "ferramentas-bim/#tabelas"
     destaque: true
   - titulo: "Tabelas para Autodesk Revit"
+    icone: "R"
     formato: "Excel (.xlsx) + instruções"
     descricao: "Para o Autodesk Standardized Data Tool for Revit (antigas BIM Interoperability Tools)."
     pagina: "ferramentas-bim/#revit"
     destaque: true
   - titulo: "Tabelas para Graphisoft Archicad"
+    icone: "A"
     formato: "XML + instruções"
     descricao: "Tabelas no formato de classificação do Archicad, fornecidas pela Infor."
     pagina: "ferramentas-bim/#archicad"
+    destaque: true
+  - titulo: "Exportação para IFC"
+    icone: "IFC"
+    formato: "Ficheiros de configuração + instruções"
+    descricao: "Parâmetros e mapeamento para exportar a classificação SECClasS em IFC, a partir do Revit e do Archicad."
+    pagina: "ferramentas-bim/#ifc"
+    estado: "Em actualização"
     destaque: true
   - titulo: "Uniformat II em português"
     formato: "Excel (.xlsx) e tabela para Revit"
     descricao: "654 entradas, versões EN e PT. Tradução da Limsen Consulting com a Lipronerg Engenharia."
     pagina: "ferramentas-bim/#uniformat"
-  - titulo: "Exportação para IFC"
-    formato: "Ficheiros de configuração + instruções"
-    descricao: "Parâmetros e mapeamento para exportar a classificação SECClasS em IFC, a partir do Revit e do Archicad."
-    pagina: "ferramentas-bim/#ifc"
-    estado: "Em actualização"
 
 # ---------------------------------------------------------------------
 #  Histórico de versões (o mais recente primeiro)
