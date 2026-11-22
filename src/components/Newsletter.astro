@@ -7,7 +7,8 @@ const action = nl.mailchimp_action ?? '';
 const q = action ? new URL(action.replace(/&amp;/g, '&')).searchParams : null;
 const honeypot = q ? `b_${q.get('u')}_${q.get('id')}` : '';
 ---
-<div class="newsletter" id="newsletter">
+<div class="newsletter" id="mailing-list">
+  <span id="newsletter" aria-hidden="true"></span><!-- âncora antiga, mantida para links já partilhados -->
   <h3>Subscrever Mailing List</h3>
   <p class="muted-light">Receba as novas versões das tabelas e as novidades do SECClasS. Pode cancelar a qualquer momento. Ver a <a href={url('/politica-de-privacidade/')}>Política de Privacidade</a>.</p>
   {nl.mailchimp_url ? (
