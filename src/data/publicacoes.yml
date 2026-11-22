@@ -15,6 +15,104 @@
 
 # --------------------------- Trabalhos que usam o SECClasS ---------------------------
 
+- titulo: "Otimização do planeamento de demolição baseado em BIM: extração de precedência de elementos construtivos e algoritmos genéticos"
+  autores: ["André Mantelatto", "Melody Njuguna", "Manuel Parente", "José Granja", "Miguel Azenha"]
+  instituicao: ""
+  local: "6.º Congresso Português de Building Information Modelling (PTBIM 2026), FEUP, Porto, vol. 2, pp. 522-531"
+  ano: 2026
+  tipo: comunicacao
+  categoria: terceiros
+  resumo: "Propõe uma metodologia que extrai automaticamente de modelos IFC as relações de precedência entre elementos estruturais, produzindo uma matriz usada num problema de otimização multiobjetivo (NSGA-II) que gera e compara cronogramas de demolição alternativos, equilibrando tempo e custo. Demonstrada num edifício real de betão armado, liga dados openBIM ao planeamento da desconstrução no contexto da construção circular."
+  papel_secclass: "Sistema de classificação adotado na metodologia, por estar orientado para a economia circular e para processos digitais e englobar o Uniclass 2015."
+  url: ""
+  ficheiro: ""
+  estado: publicado
+  fonte: "Base de dados de artigos PTBIM 2016–2026 (texto integral)"
+
+- titulo: "Da WBS ao MQT — o openBIM como padrão para a extração automática de quantidades"
+  autores: ["Marta Campos", "Paula Couto", "Sofia Henriques", "Ricardo Simões", "Andressa Oliveira"]
+  instituicao: ""
+  local: "6.º Congresso Português de Building Information Modelling (PTBIM 2026), FEUP, Porto, vol. 1, pp. 403-411"
+  ano: 2026
+  tipo: comunicacao
+  categoria: terceiros
+  resumo: "Apresenta a Work Breakdown Structure (WBS) desenvolvida pela buildingSMART Portugal como base comum para o Mapa de Quantidades e Trabalhos, com regras de medição ancoradas no IFC, abrangendo todos os trabalhos de construção de edifícios, especialidades e intervenientes, e uma prova de conceito da sua aplicação."
+  papel_secclass: "Apresentado como o sistema de classificação nacional; WBS e SECClasS tratam níveis distintos da classificação e prevê-se a sua articulação, com o mapeamento dos capítulos da WBS para IFC e SECClasS."
+  url: ""
+  ficheiro: ""
+  estado: publicado
+  fonte: "Base de dados de artigos PTBIM 2016–2026 (texto integral)"
+
+- titulo: "Geração automática de mapas de quantidades e trabalhos a partir de IFC: prova de conceito baseada na WBS buildingSMART Portugal"
+  autores: ["Andressa Oliveira", "Ricardo Simões", "Marta Campos", "José Granja", "Miguel Azenha", "Ali Motamedi", "José Lino"]
+  instituicao: ""
+  local: "6.º Congresso Português de Building Information Modelling (PTBIM 2026), FEUP, Porto, vol. 1, pp. 392-401"
+  ano: 2026
+  tipo: comunicacao
+  categoria: terceiros
+  resumo: "Desenvolve uma aplicação que configura a correspondência entre elementos de modelos IFC e itens da WBS da buildingSMART Portugal e calcula automaticamente as quantidades, gerando um MQT em Excel e um ficheiro para visualização em Power BI integrado com o Speckle."
+  papel_secclass: "Os requisitos de informação dos elementos do modelo incluem a classificação SECClasS (ex.: tabela Produtos, Pr_20_93_85_14 para paredes estruturais)."
+  url: ""
+  ficheiro: ""
+  estado: publicado
+  fonte: "Base de dados de artigos PTBIM 2016–2026 (texto integral)"
+
+- titulo: "MQT_builder: automação de mapas de quantidades multiplataforma em fluxos BIM"
+  autores: ["Paulo Rodrigues", "João Moura"]
+  instituicao: ""
+  local: "6.º Congresso Português de Building Information Modelling (PTBIM 2026), FEUP, Porto, vol. 1, pp. 340-348"
+  ano: 2026
+  tipo: comunicacao
+  categoria: terceiros
+  resumo: "Apresenta o MQT_builder, parte de um ambiente integrado de gestão de informação BIM com uma base de dados comum de projetos, fases, zonas, medições e métricas, interoperável com Revit e IFC, em que cada medição é um registo auditável e rastreável por elemento."
+  papel_secclass: "Todos os artigos das bibliotecas de medição estão classificados com o SECClasS, o que garante uma estrutura comum entre especialidades e a comparabilidade entre projetos; a exploração analítica da classificação faz parte do roadmap."
+  url: ""
+  ficheiro: ""
+  estado: publicado
+  fonte: "Base de dados de artigos PTBIM 2016–2026 (texto integral)"
+
+- titulo: "Dimensões legislativas da adoção da metodologia BIM em Portugal"
+  autores: ["Vander Escovalo", "Ana Brandão de Vasconcelos", "António Cabaço"]
+  instituicao: ""
+  local: "5.º Congresso Português de Building Information Modelling (PTBIM 2024), UMinho Editora, vol. 2, pp. 401-412"
+  ano: 2024
+  tipo: comunicacao
+  categoria: terceiros
+  resumo: "Identifica normas internacionais relevantes para os conteúdos técnicos e o faseamento de projetos em BIM (ISO 19650, ISO 12006, ISO 17412, ISO 29481) e analisa a sua adaptação ao enquadramento legal português, incluindo a Portaria n.º 255/2023 e o Decreto-Lei n.º 40/2015."
+  papel_secclass: "Destaca o SECClasS como iniciativa para um sistema de classificação aplicável a objetos BIM, que poderá ser adotado como sistema único e tecnicamente reconhecido para a classificação da construção."
+  url: "https://doi.org/10.21814/uminho.ed.164.33"
+  ficheiro: ""
+  estado: publicado
+  fonte: "Base de dados de artigos PTBIM 2016–2026 (texto integral)"
+
+- titulo: "Plataforma BIM para criação de regulamentos digitais no âmbito do licenciamento urbanístico"
+  autores: ["Bruno Muniz", "José Granja", "Miguel Azenha"]
+  instituicao: ""
+  local: "5.º Congresso Português de Building Information Modelling (PTBIM 2024), UMinho Editora, vol. 2, pp. 161-172"
+  ano: 2024
+  tipo: comunicacao
+  categoria: terceiros
+  resumo: "Desenvolve o protótipo de uma plataforma que permite a técnicos de licenciamento criar regulamentos digitais com programação visual por blocos e executar verificações de conformidade automáticas em modelos IFC."
+  papel_secclass: "Usa o SECClasS para identificar os compartimentos (cozinha, varanda, sala) nas regras de verificação, por refletir as particularidades da construção portuguesa; aponta casos em que o sistema é incompleto para o domínio do licenciamento."
+  url: "https://doi.org/10.21814/uminho.ed.164.13"
+  ficheiro: ""
+  estado: publicado
+  fonte: "Base de dados de artigos PTBIM 2016–2026 (texto integral)"
+
+- titulo: "BIM e as regras de medição em Portugal"
+  autores: ["Laura Almeida", "Filipe Lima", "Sébastien Roux", "Miguel Azenha"]
+  instituicao: ""
+  local: "5.º Congresso Português de Building Information Modelling (PTBIM 2024), UMinho Editora, vol. 2, pp. 63-74"
+  ano: 2024
+  tipo: comunicacao
+  categoria: terceiros
+  resumo: "Analisa o alinhamento do BIM com as regras de medição portuguesas (CSRMC), com entrevistas a entidades do setor e dois casos de estudo (arquitetura e estruturas; instalações MEP), e propõe metodologias para otimizar as medições baseadas em modelos."
+  papel_secclass: "Refere o SECClasS como iniciativa nacional com a qual a estrutura de articulado proposta se pode alinhar, rumo a referências nacionais e à padronização."
+  url: "https://doi.org/10.21814/uminho.ed.164.5"
+  ficheiro: ""
+  estado: publicado
+  fonte: "Base de dados de artigos PTBIM 2016–2026 (texto integral)"
+
 - titulo: "Uma ferramenta baseada em BIM para a avaliação expedita do carbono incorporado utilizando o sistema de classificação SECClasS"
   autores: ["Sara Parece", "Tiago Costa", "Tiago Gonçalves", "Paulo Rodrigues", "Ricardo Resende"]
   instituicao: "Iscte; Zumerlink; Quadrante Engenharia"
