@@ -89,7 +89,7 @@ As tabelas no formato XML e o vídeo tutorial são fornecidos pela [Infor](https
 
 <p><span class="pill pill-warn">Em actualização</span></p>
 
-O IFC (Industry Foundation Classes) é uma descrição digital normalizada do ambiente construído, incluindo edifícios e infraestruturas. É uma norma internacional aberta ([ISO 16739-1:2024](https://www.iso.org/standard/84123.html)), independente do fornecedor de software, e o principal produto técnico da [buildingSMART International](https://www.buildingsmart.org/) para a promoção do openBIM®.
+O IFC (Industry Foundation Classes) é uma descrição digital normalizada do ambiente construído, incluindo edifícios e infraestruturas. É uma norma internacional aberta ([ISO 16739-1:2024](https://www.iso.org/standard/84123.html)), independente do fornecedor de software, e o principal produto técnico da [buildingSMART International](https://www.buildingsmart.org/) para a promoção do openBIM.
 
 ### Exportação de Revit para IFC
 
@@ -101,7 +101,7 @@ Para exportar para IFC um modelo já classificado no Revit, é necessário mapea
 
 Veja o [vídeo de exportação de Revit para IFC](https://www.youtube.com/watch?v=Kk3WEfh_lvo) no canal YouTube do SECClasS. O manual de instruções está a ser atualizado.
 
-Para abrir ficheiros IFC (.ifc) é necessário um software compatível; existem vários, gratuitos e pagos. No exemplo apresentado usa-se o [Solibri Anywhere](https://www.solibri.com/solibri-anywhere) (gratuito).
+Para abrir ficheiros IFC (.ifc) é necessário um software compatível, como o [BIMcollab Zoom](https://helpcenter.bimcollab.com/en/articles/396999-download-bimcollab-zoom).
 
 ### Exportação de Archicad para IFC
 

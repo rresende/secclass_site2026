@@ -23,6 +23,10 @@ PDFs próprios (manuais, artigos): coloque-os em `public/docs/` e indique-os no 
 
 Logótipos: `public/img/` (SVG gerados a partir do Poppins, em contornos). Falta o logo EEA Grants: coloque-o em `public/img/` e indique-o em `projeto.financiador.logo`.
 
+## Regras de escrita
+
+- Escrever sempre **openBIM**, sem o símbolo ®.
+
 ## Publicações
 
 Para acrescentar um trabalho que aplica o SECClasS, edite `src/data/publicacoes.yml`: copie um bloco existente, preencha título, autores, instituição, local, ano, tipo, resumo, papel do SECClasS e link (DOI de preferência), e grave com `estado: publicado`. O PDF, se o quiser alojar, vai para `public/docs/` e indica-se em `ficheiro`.
