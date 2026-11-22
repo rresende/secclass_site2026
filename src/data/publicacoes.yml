@@ -17,63 +17,63 @@
 
 - titulo: "Otimização do planeamento de demolição baseado em BIM: extração de precedência de elementos construtivos e algoritmos genéticos"
   autores: ["André Mantelatto", "Melody Njuguna", "Manuel Parente", "José Granja", "Miguel Azenha"]
-  instituicao: ""
-  local: "6.º Congresso Português de Building Information Modelling (PTBIM 2026), FEUP, Porto, vol. 2, pp. 522-531"
+  instituicao: "Escola de Engenharia, Universidade do Minho"
+  local: "6.º Congresso Português de Building Information Modelling (PTBIM 2026), FEUP Edições, vol. 2, pp. 522-531"
   ano: 2026
   tipo: comunicacao
   categoria: terceiros
   resumo: "Propõe uma metodologia que extrai automaticamente de modelos IFC as relações de precedência entre elementos estruturais, produzindo uma matriz usada num problema de otimização multiobjetivo (NSGA-II) que gera e compara cronogramas de demolição alternativos, equilibrando tempo e custo. Demonstrada num edifício real de betão armado, liga dados openBIM ao planeamento da desconstrução no contexto da construção circular."
   papel_secclass: "Sistema de classificação adotado na metodologia, por estar orientado para a economia circular e para processos digitais e englobar o Uniclass 2015."
-  url: ""
+  url: "https://doi.org/10.24840/978-972-752-358-0_108"
   ficheiro: ""
   estado: publicado
   fonte: "Base de dados de artigos PTBIM 2016–2026 (texto integral)"
 
 - titulo: "Da WBS ao MQT — o openBIM como padrão para a extração automática de quantidades"
   autores: ["Marta Campos", "Paula Couto", "Sofia Henriques", "Ricardo Simões", "Andressa Oliveira"]
-  instituicao: ""
-  local: "6.º Congresso Português de Building Information Modelling (PTBIM 2026), FEUP, Porto, vol. 1, pp. 403-411"
+  instituicao: "buildingSMART Portugal; LNEC; TPF Consultores; WALLNUT; Universidade do Minho"
+  local: "6.º Congresso Português de Building Information Modelling (PTBIM 2026), FEUP Edições, vol. 1, pp. 403-411"
   ano: 2026
   tipo: comunicacao
   categoria: terceiros
   resumo: "Apresenta a Work Breakdown Structure (WBS) desenvolvida pela buildingSMART Portugal como base comum para o Mapa de Quantidades e Trabalhos, com regras de medição ancoradas no IFC, abrangendo todos os trabalhos de construção de edifícios, especialidades e intervenientes, e uma prova de conceito da sua aplicação."
   papel_secclass: "Apresentado como o sistema de classificação nacional; WBS e SECClasS tratam níveis distintos da classificação e prevê-se a sua articulação, com o mapeamento dos capítulos da WBS para IFC e SECClasS."
-  url: ""
+  url: "https://doi.org/10.24840/978-972-752-358-0_037"
   ficheiro: ""
   estado: publicado
   fonte: "Base de dados de artigos PTBIM 2016–2026 (texto integral)"
 
 - titulo: "Geração automática de mapas de quantidades e trabalhos a partir de IFC: prova de conceito baseada na WBS buildingSMART Portugal"
   autores: ["Andressa Oliveira", "Ricardo Simões", "Marta Campos", "José Granja", "Miguel Azenha", "Ali Motamedi", "José Lino"]
-  instituicao: ""
-  local: "6.º Congresso Português de Building Information Modelling (PTBIM 2026), FEUP, Porto, vol. 1, pp. 392-401"
+  instituicao: "Universidade do Minho; WALLNUT; Magnético; École de Technologie Supérieure; buildingSMART Portugal"
+  local: "6.º Congresso Português de Building Information Modelling (PTBIM 2026), FEUP Edições, vol. 1, pp. 392-401"
   ano: 2026
   tipo: comunicacao
   categoria: terceiros
   resumo: "Desenvolve uma aplicação que configura a correspondência entre elementos de modelos IFC e itens da WBS da buildingSMART Portugal e calcula automaticamente as quantidades, gerando um MQT em Excel e um ficheiro para visualização em Power BI integrado com o Speckle."
   papel_secclass: "Os requisitos de informação dos elementos do modelo incluem a classificação SECClasS (ex.: tabela Produtos, Pr_20_93_85_14 para paredes estruturais)."
-  url: ""
+  url: "https://doi.org/10.24840/978-972-752-358-0_036"
   ficheiro: ""
   estado: publicado
   fonte: "Base de dados de artigos PTBIM 2016–2026 (texto integral)"
 
 - titulo: "MQT_builder: automação de mapas de quantidades multiplataforma em fluxos BIM"
   autores: ["Paulo Rodrigues", "João Moura"]
-  instituicao: ""
-  local: "6.º Congresso Português de Building Information Modelling (PTBIM 2026), FEUP, Porto, vol. 1, pp. 340-348"
+  instituicao: "Quadrante Engenharia e Consultoria"
+  local: "6.º Congresso Português de Building Information Modelling (PTBIM 2026), FEUP Edições, vol. 1, pp. 340-348"
   ano: 2026
   tipo: comunicacao
   categoria: terceiros
   resumo: "Apresenta o MQT_builder, parte de um ambiente integrado de gestão de informação BIM com uma base de dados comum de projetos, fases, zonas, medições e métricas, interoperável com Revit e IFC, em que cada medição é um registo auditável e rastreável por elemento."
   papel_secclass: "Todos os artigos das bibliotecas de medição estão classificados com o SECClasS, o que garante uma estrutura comum entre especialidades e a comparabilidade entre projetos; a exploração analítica da classificação faz parte do roadmap."
-  url: ""
+  url: "https://doi.org/10.24840/978-972-752-358-0_031"
   ficheiro: ""
   estado: publicado
   fonte: "Base de dados de artigos PTBIM 2016–2026 (texto integral)"
 
 - titulo: "Dimensões legislativas da adoção da metodologia BIM em Portugal"
   autores: ["Vander Escovalo", "Ana Brandão de Vasconcelos", "António Cabaço"]
-  instituicao: ""
+  instituicao: "Universidade Lusófona; LNEC"
   local: "5.º Congresso Português de Building Information Modelling (PTBIM 2024), UMinho Editora, vol. 2, pp. 401-412"
   ano: 2024
   tipo: comunicacao
@@ -87,7 +87,7 @@
 
 - titulo: "Plataforma BIM para criação de regulamentos digitais no âmbito do licenciamento urbanístico"
   autores: ["Bruno Muniz", "José Granja", "Miguel Azenha"]
-  instituicao: ""
+  instituicao: "Universidade do Minho (ISISE, ARISE)"
   local: "5.º Congresso Português de Building Information Modelling (PTBIM 2024), UMinho Editora, vol. 2, pp. 161-172"
   ano: 2024
   tipo: comunicacao
@@ -101,7 +101,7 @@
 
 - titulo: "BIM e as regras de medição em Portugal"
   autores: ["Laura Almeida", "Filipe Lima", "Sébastien Roux", "Miguel Azenha"]
-  instituicao: ""
+  instituicao: "Limsen Consulting; Universidade do Minho (ISISE)"
   local: "5.º Congresso Português de Building Information Modelling (PTBIM 2024), UMinho Editora, vol. 2, pp. 63-74"
   ano: 2024
   tipo: comunicacao
@@ -240,6 +240,20 @@
   ficheiro: "docs/PTBIM2022_Product-Data-Templates-CT197.pdf"
   estado: publicado
   fonte: "site SECClasS (2022)"
+
+- titulo: "Experience in the field of Sustainability Enhanced Construction Classification System"
+  autores: ["Rodrigo Lima", "Filipa Salvado", "Maria João Falcão Silva", "Paula Couto"]
+  instituicao: "LNEC"
+  local: "Building Information Modelling (BIM) in Design, Construction and Operations IV — WIT Transactions on the Built Environment, pp. 15-24 (WIT Press)"
+  ano: 2021
+  tipo: comunicacao
+  categoria: projeto
+  resumo: ""
+  papel_secclass: "Apresenta, numa conferência internacional, a experiência do projeto SECClasS no desenvolvimento de um sistema de classificação da construção orientado para a sustentabilidade."
+  url: "https://doi.org/10.2495/BIM210021"
+  ficheiro: ""
+  estado: publicado
+  fonte: "Crossref"
 
 - titulo: "Construction information classification systems adapted to sustainability: international experience"
   autores: ["Rodrigo Lima", "Maria João Falcão Silva", "Ana Filipa Salvado", "Paula Couto"]
