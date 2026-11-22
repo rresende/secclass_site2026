@@ -38,7 +38,7 @@ morada:
 #     copiar o atributo action="https://....list-manage.com/subscribe/post?u=...&id=f758f3d3ef".
 # Se ambos estiverem vazios, o botão abre um email (protegido) para info@secclass.pt.
 newsletter:
-  mailchimp_url: ""
+  mailchimp_url: "https://eepurl.com/jKs_oIITnm"
   mailchimp_action: ""
 
 contactos:
