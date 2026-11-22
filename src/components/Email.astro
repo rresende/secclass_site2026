@@ -1,0 +1,13 @@
+---
+/**
+ * Endereço de email protegido contra recolha automática (spam).
+ * O HTML não contém o endereço: guarda-o invertido e codificado, e o
+ * script /js/email.js monta o link mailto: no browser.
+ * Sem JavaScript mostra "utilizador (arroba) dominio".
+ */
+interface Props { email: string; subject?: string; label?: string; class?: string; }
+const { email, subject = '', label = '', class: cls = '' } = Astro.props;
+const enc = Buffer.from([...email].reverse().join(''), 'utf8').toString('base64');
+const [user, domain] = email.split('@');
+---
+<a class:list={['eml', cls]} href="#" data-e={enc} data-s={subject} data-l={label} rel="nofollow">{label || `${user} (arroba) ${domain}`}</a>

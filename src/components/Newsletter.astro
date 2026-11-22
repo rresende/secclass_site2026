@@ -1,6 +1,8 @@
 ---
+import Email from './Email.astro';
 import { site, url } from '../lib/data.js';
-const action = site.newsletter?.mailchimp_action ?? '';
+const nl = site.newsletter ?? {};
+const action = nl.mailchimp_action ?? '';
 // Campo anti-spam do Mailchimp: b_<u>_<id>, derivado do próprio URL.
 const q = action ? new URL(action.replace(/&amp;/g, '&')).searchParams : null;
 const honeypot = q ? `b_${q.get('u')}_${q.get('id')}` : '';
@@ -8,7 +10,9 @@ const honeypot = q ? `b_${q.get('u')}_${q.get('id')}` : '';
 <div class="newsletter" id="newsletter">
   <h3>Subscrever Newsletter</h3>
   <p class="muted-light">Receba as novas versões das tabelas e as novidades do SECClasS. Pode cancelar a qualquer momento. Ver a <a href={url('/politica-de-privacidade/')}>Política de Privacidade</a>.</p>
-  {action ? (
+  {nl.mailchimp_url ? (
+    <a class="btn" href={nl.mailchimp_url} rel="noopener">Subscrever Newsletter</a>
+  ) : action ? (
     <form action={action} method="post" target="_blank" class="nl-form">
       <label>Nome <input type="text" name="FNAME" autocomplete="given-name" /></label>
       <label>Email <input type="email" name="EMAIL" required autocomplete="email" /></label>
@@ -16,6 +20,6 @@ const honeypot = q ? `b_${q.get('u')}_${q.get('id')}` : '';
       <button class="btn" type="submit">Subscrever Newsletter</button>
     </form>
   ) : (
-    <a class="btn" href={`mailto:${site.contactos.email}?subject=Subscrever%20newsletter%20SECClasS`}>Subscrever Newsletter</a>
+    <Email email={site.contactos.email} subject="Subscrever newsletter SECClasS" label="Subscrever Newsletter" class="btn" />
   )}
 </div>

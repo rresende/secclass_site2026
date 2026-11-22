@@ -30,11 +30,15 @@ morada:
   - "1649-026 LISBOA"
   - "PORTUGAL"
 
-# Newsletter (Mailchimp, lista "SECClasS"). Cole aqui o URL "action" do formulário
-# embebido: Mailchimp → Audience → Signup forms → Embedded forms → ver código,
-# atributo action="https://....list-manage.com/subscribe/post?u=...&id=f758f3d3ef".
-# Enquanto estiver vazio, o botão abre um email de pedido de subscrição.
+# Newsletter (Mailchimp, lista "SECClasS"). Preencha UMA das opções:
+#  1) mailchimp_url  (recomendado) — página de inscrição alojada no Mailchimp:
+#     Audience → Signup forms → Form builder → copiar o "Signup form URL"
+#     (ex.: http://eepurl.com/abc123). O botão abre essa página.
+#  2) mailchimp_action — formulário dentro do site: Signup forms → Embedded forms,
+#     copiar o atributo action="https://....list-manage.com/subscribe/post?u=...&id=f758f3d3ef".
+# Se ambos estiverem vazios, o botão abre um email (protegido) para info@secclass.pt.
 newsletter:
+  mailchimp_url: ""
   mailchimp_action: ""
 
 contactos:

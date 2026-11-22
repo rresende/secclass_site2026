@@ -1,4 +1,5 @@
 ---
+import Email from '../components/Email.astro';
 import Base from '../layouts/Base.astro';
 import { site, url } from '../lib/data.js';
 ---
@@ -17,7 +18,7 @@ import { site, url } from '../lib/data.js';
       <p>Os dados recolhidos podem ser consultados, alterados e/ou eliminados através dos contactos indicados no rodapé do site. Conservamos as informações recolhidas pelo tempo necessário para fornecer o serviço solicitado. Os dados armazenados são protegidos por meios adequados para evitar perdas ou roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados. Não partilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.</p>
       <p>O website secclass.pt contém links para websites externos, sobre os quais o SECClasS não tem controlo e pelos quais não nos podemos responsabilizar. A página de <a href={url('/pesquisa/')}>pesquisa</a> incorpora a ferramenta alojada em pesquisa.secclass.pt.</p>
       <p>O utilizador é livre de recusar a nossa solicitação de informações pessoais. Contudo, o uso do site secclass.pt implica a aceitação da nossa Política de Privacidade e dos nossos <a href={url('/termos-condicoes/')}>Termos e Condições</a>.</p>
-      <p>Se tiver alguma dúvida sobre como lidamos com dados do utilizador e informações pessoais, entre em contacto através do email <a href={`mailto:${site.contactos.email}`}>{site.contactos.email}</a>.</p>
+      <p>Se tiver alguma dúvida sobre como lidamos com dados do utilizador e informações pessoais, entre em contacto através do email <Email email={site.contactos.email} />.</p>
 
       <h2>Política de Cookies</h2>
       <p>Este site não utiliza cookies nem ferramentas de análise de tráfego, e as fontes tipográficas são servidas a partir do próprio site. O alojamento pode registar dados técnicos de acesso (endereço IP, data e página pedida) para fins de segurança.</p>
