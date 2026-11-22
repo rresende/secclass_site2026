@@ -33,15 +33,14 @@ MODEL = "claude-opus-5-5"
 DATA = pathlib.Path(__file__).resolve().parents[1] / "src" / "data" / "publicacoes.yml"
 
 DOMINIOS = [
-    # Agregador nacional e repositórios institucionais
-    "rcaap.pt", "repositorio.iscte-iul.pt", "repositorium.sdum.uminho.pt",
-    "repositorio-aberto.up.pt", "run.unl.pt", "estudogeral.uc.pt",
-    "repositorio.ul.pt", "scholar.tecnico.ulisboa.pt", "repositorio.lnec.pt",
-    "comum.rcaap.pt", "recipp.ipp.pt", "repositorio.ipl.pt", "bibliotecadigital.ipb.pt",
-    "ria.ua.pt", "dspace.uevora.pt", "sapientia.ualg.pt", "ubibliorum.ubi.pt",
+    # Agregador nacional e universidades/politécnicos (inclui todos os subdomínios,
+    # p.ex. repositorium.sdum.uminho.pt e as atas PTBIM da UMinho Editora)
+    "rcaap.pt", "iscte-iul.pt", "uminho.pt", "up.pt", "ulisboa.pt", "unl.pt",
+    "uc.pt", "ua.pt", "uevora.pt", "ualg.pt", "ubi.pt", "utad.pt", "uac.pt",
+    "ipp.pt", "ipl.pt", "ipb.pt", "ipleiria.pt", "ipcb.pt", "ipv.pt", "lnec.pt",
     # Congressos de BIM e bases bibliográficas
     "ptbim.org", "researchgate.net", "mdpi.com", "sciencedirect.com",
-    "openalex.org", "crossref.org", "doi.org", "scholar.archive.org",
+    "openalex.org", "crossref.org", "doi.org", "scholar.archive.org", "zenodo.org",
 ]
 
 
