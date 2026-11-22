@@ -15,6 +15,20 @@
 
 # --------------------------- Trabalhos que usam o SECClasS ---------------------------
 
+- titulo: "Uma ferramenta baseada em BIM para a avaliação expedita do carbono incorporado utilizando o sistema de classificação SECClasS"
+  autores: ["Sara Parece", "Tiago Costa", "Tiago Gonçalves", "Paulo Rodrigues", "Ricardo Resende"]
+  instituicao: "Iscte; Zumerlink; Quadrante Engenharia"
+  local: "5.º Congresso Português de Building Information Modelling (PTBIM 2024), UMinho Editora, pp. 223-235"
+  ano: 2024
+  tipo: comunicacao
+  categoria: terceiros
+  resumo: "Propõe e testa uma ferramenta (add-in pyRevit) que calcula o Potencial de Aquecimento Global da construção a partir de modelos BIM classificados, aplicada aos modelos de arquitetura e estrutura do edifício multifamiliar Nexity Laranjeiras, projetado pela Quadrante Engenharia. Analisa como a granularidade geométrica e informativa dos modelos e os métodos de modelação influenciam o processo e os resultados, e conclui que a ferramenta é viável desde as fases iniciais do projeto, sem necessidade de remodelar opções construtivas."
+  papel_secclass: "O SECClasS liga o modelo BIM à base de dados de ACV: fornece a estrutura de dados e a correspondência automática entre elementos de construção e impactes ambientais."
+  url: "https://doi.org/10.21814/uminho.ed.164.18"
+  ficheiro: "docs/PTBIM2024_Carbono-Incorporado-SECClasS.pdf"
+  estado: publicado
+  fonte: "Repositório Iscte (hdl.handle.net/10071/34204)"
+
 - titulo: "A BIM-based tool for embodied carbon assessment using a Construction Classification System"
   autores: ["Sara Parece", "Ricardo Pontes Resende", "Vasco Rato"]
   instituicao: "Iscte – Instituto Universitário de Lisboa"
