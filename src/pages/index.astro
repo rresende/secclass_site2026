@@ -36,19 +36,22 @@ const outros = site.downloads.filter((d) => !d.destaque);
       <h2>Pesquisar, descarregar e usar no software BIM</h2>
       <p class="intro">Todos os ficheiros estão versionados no <a href={site.repositorio_dados} target="_blank" rel="noopener">repositório público do SECClasS</a>.</p>
       <div class="apps">
-        <a class="app" href={url('/pesquisa/')}>
+        <div class="app">
           <span class="app-ico" aria-hidden="true">⌕</span>
-          <h3>Pesquisa</h3>
+          <h3><a class="app-title" href={url('/pesquisa/')}>Pesquisa</a></h3>
           <p>Procure qualquer termo por código, título em português ou título Uniclass, com filtros por tabela e versão.</p>
-          <span class="app-cta">Abrir pesquisa&nbsp;→</span>
-        </a>
-        {apps.map((d, i) => (
-          <a class="app" href={d.pagina ? url(d.pagina) : d.url} rel="noopener">
+          <div class="app-links"><a class="app-dl" href={url('/pesquisa/')}>Abrir pesquisa&nbsp;→</a></div>
+        </div>
+        {apps.map((d) => (
+          <div class="app">
             <span class="app-ico" aria-hidden="true">{d.icone ?? '↓'}</span>{d.estado && <span class="app-badge">{d.estado}</span>}
-            <h3>{d.titulo}</h3>
+            <h3><a class="app-title" href={url(d.pagina)}>{d.titulo}</a></h3>
             <p>{d.descricao}</p>
-            <span class="app-cta">{d.pagina ? 'Ficheiros e instruções' : `Descarregar · ${d.formato}`}&nbsp;→</span>
-          </a>
+            <div class="app-links">
+              <a href={url(d.pagina)}>Mais</a>
+              {d.descarregar && <a class="app-dl" href={d.descarregar} rel="noopener">Descarregar&nbsp;↓</a>}
+            </div>
+          </div>
         ))}
       </div>
 

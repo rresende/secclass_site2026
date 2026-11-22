@@ -91,30 +91,34 @@ tabelas_nota: >-
 # ---------------------------------------------------------------------
 downloads:
   # destaque: true -> cartões grandes das Aplicações (por esta ordem)
-  # icone: letra ou símbolo do cartão | url: link direto | pagina: página do site
+  # icone: letra ou símbolo | pagina: link "Mais" (página do site) | descarregar: link direto "Descarregar"
   - titulo: "Tabelas SECClasS"
     icone: "▦"
     formato: "Excel (.xlsx) + instruções"
     descricao: "As 13 tabelas, com código, título em português e título Uniclass."
     pagina: "ferramentas-bim/#tabelas"
+    descarregar: "https://github.com/rresende/secclass/releases/download/V2.0/Tabelas.SECClasS.V2.0.xlsx"
     destaque: true
   - titulo: "Tabelas para Autodesk Revit"
     icone: "R"
     formato: "Excel (.xlsx) + instruções"
     descricao: "Para o Autodesk Standardized Data Tool for Revit (antigas BIM Interoperability Tools)."
     pagina: "ferramentas-bim/#revit"
+    descarregar: "https://github.com/rresende/secclass/releases/download/V2.0/SECClasS_V2.0_AutodeskInteroperabilityTools.xlsx"
     destaque: true
   - titulo: "Tabelas para Graphisoft Archicad"
     icone: "A"
     formato: "XML + instruções"
     descricao: "Tabelas no formato de classificação do Archicad, fornecidas pela Infor."
     pagina: "ferramentas-bim/#archicad"
+    descarregar: "https://github.com/rresende/secclass/releases/download/V2.0/SECClasS.V2.0.para.Archicad.xml"
     destaque: true
   - titulo: "Exportação para IFC"
     icone: "IFC"
     formato: "Ficheiros de configuração + instruções"
     descricao: "Parâmetros e mapeamento para exportar a classificação SECClasS em IFC, a partir do Revit e do Archicad."
     pagina: "ferramentas-bim/#ifc"
+    descarregar: "https://github.com/rresende/secclass/tree/main/ClassificationFiles/IFC_files"
     estado: "Em actualização"
     destaque: true
   - titulo: "Uniformat II em português"

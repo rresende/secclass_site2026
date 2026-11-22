@@ -179,3 +179,11 @@ details.more summary { cursor: pointer; font-weight: 700; color: var(--indigo); 
 .dl { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
 .app-badge { position: absolute; top: 18px; right: 18px; font-size: .75rem; font-weight: 700; background: var(--sand); color: var(--navy); padding: 3px 8px; border-radius: 6px; }
 .app-ico { font-size: 1.1rem; }
+.app-title { color: #fff; text-decoration: none; }
+.app-title:hover { color: var(--sand); }
+.app-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.app-links a { font-weight: 700; font-size: .92rem; text-decoration: none; padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.45); color: #fff; }
+.app-links a:hover { border-color: var(--sand); color: var(--sand); }
+.app-links .app-dl { background: var(--sand); border-color: var(--sand); color: var(--navy); }
+.app-links .app-dl:hover { background: #fff; border-color: #fff; color: var(--navy); }
+div.app:hover { transform: none; box-shadow: none; }
