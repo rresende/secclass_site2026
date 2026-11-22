@@ -1,10 +1,9 @@
 # =====================================================================
 #  Trabalhos que usam ou referem o SECClasS
 #
-#  Este ficheiro é alimentado de 15 em 15 dias pelo agente
-#  (agent/procurar_publicacoes.py), que abre um pull request com
-#  entradas no estado "proposta". Só aparecem no site as entradas com
-#  estado "publicado": reveja, corrija e mude o estado antes de aprovar.
+#  Para acrescentar um trabalho, copie um bloco abaixo e preencha os
+#  campos. Só aparecem no site as entradas com estado "publicado"
+#  (use "proposta" para guardar um rascunho sem o mostrar).
 #
 #  Campos:
 #    titulo, autores (lista), instituicao, local (revista, congresso,

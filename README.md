@@ -23,20 +23,9 @@ PDFs próprios (manuais, artigos): coloque-os em `public/docs/` e indique-os no 
 
 Logótipos: `public/img/` (SVG gerados a partir do Poppins, em contornos). Falta o logo EEA Grants: coloque-o em `public/img/` e indique-o em `projeto.financiador.logo`.
 
-## Agente de publicações
+## Publicações
 
-`agent/procurar_publicacoes.py` corre de 15 em 15 dias (`.github/workflows/publicacoes.yml`):
-
-1. pesquisa na web (RCAAP, repositórios universitários, PTBIM, bases bibliográficas) com o Claude;
-2. confirma que cada trabalho menciona mesmo o SECClasS e extrai título, autores, instituição, local, resumo, papel do SECClasS e link;
-3. remove duplicados e acrescenta as entradas com `estado: proposta`;
-4. abre um **pull request** para revisão.
-
-Nada aparece no site sem revisão: aprove mudando `estado: proposta` para `estado: publicado` e fazendo merge.
-
-Configuração (uma vez): *Settings → Secrets and variables → Actions → New repository secret* → `ANTHROPIC_API_KEY`.
-Também em *Settings → Actions → General*, ative "Allow GitHub Actions to create and approve pull requests".
-Para correr à mão: *Actions → Procurar publicações → Run workflow*.
+Para acrescentar um trabalho que aplica o SECClasS, edite `src/data/publicacoes.yml`: copie um bloco existente, preencha título, autores, instituição, local, ano, tipo, resumo, papel do SECClasS e link (DOI de preferência), e grave com `estado: publicado`. O PDF, se o quiser alojar, vai para `public/docs/` e indica-se em `ficheiro`.
 
 ## Desenvolvimento local
 
