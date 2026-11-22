@@ -24,10 +24,22 @@ pesquisa_url: "https://pesquisa.secclass.pt/"
 repositorio_dados: "https://github.com/rresende/secclass"
 repositorio_site: "https://github.com/rresende/secclass_site2026"
 
+morada:
+  - "ISTAR-Iscte"
+  - "Av. das Forças Armadas, 40"
+  - "1649-026 LISBOA"
+  - "PORTUGAL"
+
+# Newsletter (Mailchimp, lista "SECClasS"). Cole aqui o URL "action" do formulário
+# embebido: Mailchimp → Audience → Signup forms → Embedded forms → ver código,
+# atributo action="https://....list-manage.com/subscribe/post?u=...&id=f758f3d3ef".
+# Enquanto estiver vazio, o botão abre um email de pedido de subscrição.
+newsletter:
+  mailchimp_action: ""
+
 contactos:
   email: "info@secclass.pt"
   email_sugestoes: "ricardo.resende@iscte-iul.pt"
-  linkedin: "https://www.linkedin.com/company/secclass-sustainability-enhanced-construction-classification-system"
   youtube: "https://youtube.com/playlist?list=PLijhXZogmBZx7DLQw7l8Wzz74_jvXHJMM"
 
 rodape_links:
@@ -76,14 +88,16 @@ downloads:
     descricao: "As 13 tabelas, com código, título em português e título Uniclass."
     url: "https://github.com/rresende/secclass/releases/download/V2.0/Tabelas.SECClasS.V2.0.xlsx"
     destaque: true
-  - titulo: "SECClasS v2.0 para Autodesk Revit"
+  - titulo: "Tabelas para Autodesk Revit"
     formato: "Excel (.xlsx)"
     descricao: "Para o Autodesk Standardized Data Tool for Revit (antigas BIM Interoperability Tools)."
     url: "https://github.com/rresende/secclass/releases/download/V2.0/SECClasS_V2.0_AutodeskInteroperabilityTools.xlsx"
-  - titulo: "SECClasS v2.0 para Graphisoft Archicad"
+    destaque: true
+  - titulo: "Tabelas para Graphisoft Archicad"
     formato: "XML"
     descricao: "Tabelas no formato de classificação do Archicad, fornecidas pela Infor."
     url: "https://github.com/rresende/secclass/releases/download/V2.0/SECClasS.V2.0.para.Archicad.xml"
+    destaque: true
   - titulo: "Uniformat II em português"
     formato: "Excel (.xlsx)"
     descricao: "654 entradas, versões EN e PT. Tradução da Limsen Consulting com a Lipronerg Engenharia."
@@ -92,10 +106,11 @@ downloads:
     formato: "Excel (.xlsx)"
     descricao: "Tabela Uniformat II em português para as ferramentas de classificação da Autodesk."
     url: "https://github.com/rresende/secclass/releases/download/v1.0_uniformat/UniformatII_Portugues_V1.0_AutodeskClassificationTools.xlsx"
-  - titulo: "Exportação para IFC"
-    formato: "TXT (property sets e mapeamento)"
-    descricao: "Ficheiros de parâmetros e de mapeamento de layers para exportar a classificação SECClasS em IFC."
-    url: "https://github.com/rresende/secclass/tree/main/ClassificationFiles/IFC_files"
+  - titulo: "Exportação de Revit para IFC"
+    formato: "Guia e ficheiros de configuração"
+    descricao: "Parâmetros e mapeamento para exportar a classificação SECClasS em IFC."
+    url: ""
+    estado: "Em actualização"
 
 # ---------------------------------------------------------------------
 #  Histórico de versões (o mais recente primeiro)
@@ -131,6 +146,9 @@ recursos:
   - titulo: "Biblioteca de objetos BIM"
     descricao: "Objetos genéricos (RFA e IFC) com Product Data Templates: porta, lavatório, gesso cartonado, lã mineral, viga de madeira."
     url: "https://github.com/rresende/secclass/tree/main/Objects"
+  - titulo: "WBS da buildingSMART Portugal"
+    descricao: "Work Breakdown Structure — proposta de articulado para o mapa de quantidades e trabalhos (MQT), com estrutura e guião (2025)."
+    url: "https://buildingsmart.pt/recursos/"
   - titulo: "Vídeos e tutoriais"
     descricao: "Canal YouTube do SECClasS: utilização no Revit e no Archicad."
     url: "https://youtube.com/playlist?list=PLijhXZogmBZxULushQjF2Y3ZE9T3QOXTw"
@@ -143,13 +161,13 @@ projeto:
     O SECClasS nasceu de um projeto de investigação financiado pelo EEA Grants (2020–2023), cujo objetivo era facilitar
     a Economia Circular na Construção através de um sistema de classificação da informação orientado para o BIM e para a
     sustentabilidade. O projeto analisou os sistemas existentes e selecionou o Uniclass 2015 (2021), traduziu-o e
-    desenvolveu regras de modelação de objetos BIM (2021), criou aplicações web de apoio (2022) e produziu casos piloto
-    e ações de divulgação (2022). O evento final decorreu no LNEC a 12 de dezembro de 2022.
+    desenvolveu regras de modelação de objetos BIM (2021), criou aplicações web de apoio e promoveu
+    ações de divulgação (2022). O evento final decorreu no LNEC a 12 de dezembro de 2022.
   coordenador: "Ricardo Pontes Resende (Iscte)"
   financiador:
     nome: "EEA Grants"
     url: "https://www.eeagrants.gov.pt/"
-    logo: ""   # ex.: /img/eea-grants.png — obrigatório manter visível
+    logo: "img/eea-grants-branco.png"   # versão branca: usar sobre fundo escuro
     texto: >-
       Através do Acordo sobre o Espaço Económico Europeu, a Islândia, o Liechtenstein e a Noruega financiam, através do
       Mecanismo Financeiro EEA Grants, projetos que reduzem as disparidades sociais e económicas na Europa e reforçam as
@@ -182,25 +200,3 @@ equipa:
   - { nome: "Miguel Torres Curado", inst: "Iscte" }
   - { nome: "Daniel Dantas Cale", inst: "Iscte" }
   - { nome: "Manoel Wagner Gaia de Melo", inst: "Iscte" }
-
-conselho_consultivo:
-  - { nome: "António Aguiar Costa", inst: "CT197 / BUILT CoLAB / IST" }
-  - { nome: "Paulo Vieira Fonseca (in memoriam)", inst: "BUILT CoLAB / PTPC" }
-  - { nome: "Ricardo Miguel", inst: "Saraiva + Associados" }
-  - { nome: "Rui de Klerk", inst: "FA-ULisboa" }
-
-# Contributos e associados da comunidade
-comunidade:
-  - { nome: "Limsen Consulting", url: "https://limsen.com/", contributo: "Tradução do Uniformat II (com a Lipronerg Engenharia)." }
-  - { nome: "Infor", url: "https://www.infor.pt/", contributo: "Tabelas e tutorial para o Graphisoft Archicad." }
-  - { nome: "Grupo Casais", url: "https://www.casais.pt/", contributo: "Partilha da sua tradução do Uniclass." }
-  - { nome: "Marta Campos Arquitetura", url: "https://martacampos.pt/", contributo: "Partilha da tradução do Uniclass; modelos piloto." }
-  - { nome: "Saraiva + Associados", url: "https://www.saraivaeassociados.com/", contributo: "Associado do projeto." }
-  - { nome: "Quadrante", url: "https://quadrante-engenharia.pt/", contributo: "Associado do projeto." }
-  - { nome: "NBS", url: "https://www.thenbs.com/", contributo: "Autorização para a tradução do Uniclass 2015." }
-
-projetos_relacionados:
-  - { nome: "CT197 — Comissão Técnica de Normalização BIM", url: "http://www.ct197.pt/" }
-  - { nome: "BUILT CoLAB", url: "https://builtcolab.pt/" }
-  - { nome: "Projeto CLOSER (LNEC)", url: "http://closer.lnec.pt" }
-  - { nome: "Circular EcoBIM", url: "https://circularecobim.eu/" }

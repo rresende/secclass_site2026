@@ -10,9 +10,9 @@ const { title, description = site.descricao } = Astro.props;
 const fullTitle = title ? `${title} — ${site.nome}` : `${site.nome} — Sistema de Classificação da Construção`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const nav = [
+  { href: url('/#aplicacoes'), label: 'Aplicações' },
   { href: url('/#tabelas'), label: 'Tabelas' },
   { href: url('/#versoes'), label: 'Versões' },
-  { href: url('/#recursos'), label: 'Recursos' },
   { href: url('/publicacoes/'), label: 'Publicações' },
   { href: url('/#projeto'), label: 'Projeto' },
 ];
@@ -23,7 +23,7 @@ const nav = [
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; frame-src https://pesquisa.secclass.pt; connect-src 'self'; base-uri 'self'; form-action 'none'" />
+      content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; frame-src https://pesquisa.secclass.pt; connect-src 'self'; base-uri 'self'; form-action 'self' https://*.list-manage.com" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
@@ -67,21 +67,23 @@ const nav = [
           <p class="muted-light">{site.manutencao}</p>
         </div>
         <div>
+          <h2 class="footer-h">Morada</h2>
+          {site.morada.map((l) => <p>{l}</p>)}
+        </div>
+        <div>
           <h2 class="footer-h">Contactos</h2>
           <p><a href={`mailto:${site.contactos.email}`}>{site.contactos.email}</a></p>
-          <p><a href={site.contactos.linkedin} rel="noopener">LinkedIn</a> · <a href={site.contactos.youtube} rel="noopener">YouTube</a> · <a href={site.repositorio_dados} rel="noopener">GitHub</a></p>
-        </div>
-        <div>
-          <h2 class="footer-h">Ligações</h2>
+          <p><a href={site.contactos.youtube} rel="noopener">YouTube</a></p>
+          <h2 class="footer-h" style="margin-top:20px">Ligações</h2>
           {site.rodape_links.map((l) => <p><a href={l.url} rel="noopener">{l.nome}</a></p>)}
-          <p><a href={url('/legal/')}>Termos, licença e privacidade</a></p>
-          <p><a href={url('/arquivo/')}>Arquivo de notícias 2020–2023</a></p>
+          <p><a href={url('/arquivo/')}>Arquivo de Notícias</a></p>
         </div>
         <div>
-          <h2 class="footer-h">Financiado por</h2>
-          {site.projeto.financiador.logo
-            ? <a href={site.projeto.financiador.url} rel="noopener"><img class="funder" src={url(site.projeto.financiador.logo)} alt="EEA Grants — Islândia, Liechtenstein, Noruega" /></a>
-            : <p><a href={site.projeto.financiador.url} rel="noopener">EEA Grants</a><br /><span class="muted-light">Islândia · Liechtenstein · Noruega</span></p>}
+          <h2 class="footer-h">Avisos legais</h2>
+          <p><a href={url('/termos-condicoes/')}>Termos e Condições</a></p>
+          <p><a href={url('/politica-de-privacidade/')}>Política de Privacidade</a></p>
+          <h2 class="footer-h" style="margin-top:20px">Financiado por</h2>
+          <a href={site.projeto.financiador.url} rel="noopener"><img class="funder" src={url(site.projeto.financiador.logo)} alt="EEA Grants — Iceland, Liechtenstein, Norway" width="150" /></a>
         </div>
       </div>
       <div class="wrap footer-legal">

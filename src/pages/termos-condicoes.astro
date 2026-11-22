@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, url } from '../lib/data.js';
+---
+<Base title="Termos e Condições">
+  <section class="section legal" style="padding-top:32px">
+    <div class="wrap" style="max-width:780px">
+      <p class="kicker"><a href={url('/')}>SECClasS</a> / Avisos legais</p>
+      <h1 style="font-size:clamp(1.8rem,4vw,2.4rem)">Termos e Condições</h1>
+      <p>Esta página contém as regras para a utilização do website do SECClasS, localizado em secclass.pt. Ao aceder a este site está a aceitar estes termos e condições. Caso não concorde com todos os termos e condições indicados nesta página, não continue a usar o site.</p>
+
+      <h2>Cookies</h2>
+      <p>Este site não utiliza cookies. Para mais informação, consulte a nossa <a href={url('/politica-de-privacidade/')}>Política de Privacidade</a>.</p>
+
+      <h2>Licença</h2>
+      <p>As tabelas do sistema de classificação SECClasS são disponibilizadas ao abrigo da licença <a href={site.licenca_url} rel="noopener">Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)</a>. A tradução do Uniclass 2015 é feita sob autorização da NBS, titular do Uniclass. As tabelas Uniformat II são publicadas pelo Construction Specifications Institute; a tradução portuguesa é da Limsen Consulting com a Lipronerg Engenharia.</p>
+      <p>Salvo indicação em contrário, os direitos de propriedade intelectual do restante material contido neste site são detidos pelo SECClasS e pelos respetivos autores. Todos os direitos de propriedade intelectual estão reservados. Pode aceder aos materiais para uso pessoal, sujeito às restrições definidas nestes termos e condições.</p>
+      <p>Com exceção do que é permitido pelas licenças acima indicadas, é interdita, sem autorização expressa emitida pelo SECClasS, a venda, aluguer, licenciamento ou sub-licenciamento, reprodução, duplicação, redistribuição ou cópia de material, aplicações ou conteúdo do SECClasS. Os artigos científicos disponibilizados mantêm os direitos e licenças definidos pelos respetivos autores e editores.</p>
+
+      <h2>Responsabilidade</h2>
+      <p>Embora o SECClasS desenvolva todos os esforços para garantir a exatidão e atualidade dos conteúdos e produtos, não pode ser responsabilizado por qualquer perda ou dano pessoal, patrimonial ou de outra espécie decorrente da utilização dos conteúdos ou produtos disponibilizados.</p>
+
+      <p class="muted" style="margin-top:32px">Última atualização: novembro de 2026 (versão original: 21 de janeiro de 2021).</p>
+    </div>
+  </section>
+</Base>

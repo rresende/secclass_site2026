@@ -1,0 +1,21 @@
+---
+import { site, url } from '../lib/data.js';
+const action = site.newsletter?.mailchimp_action ?? '';
+// Campo anti-spam do Mailchimp: b_<u>_<id>, derivado do próprio URL.
+const q = action ? new URL(action.replace(/&amp;/g, '&')).searchParams : null;
+const honeypot = q ? `b_${q.get('u')}_${q.get('id')}` : '';
+---
+<div class="newsletter" id="newsletter">
+  <h3>Subscrever Newsletter</h3>
+  <p class="muted-light">Receba as novas versões das tabelas e as novidades do SECClasS. Pode cancelar a qualquer momento. Ver a <a href={url('/politica-de-privacidade/')}>Política de Privacidade</a>.</p>
+  {action ? (
+    <form action={action} method="post" target="_blank" class="nl-form">
+      <label>Nome <input type="text" name="FNAME" autocomplete="given-name" /></label>
+      <label>Email <input type="email" name="EMAIL" required autocomplete="email" /></label>
+      <div aria-hidden="true" style="position:absolute;left:-5000px"><input type="text" name={honeypot} tabindex="-1" value="" /></div>
+      <button class="btn" type="submit">Subscrever Newsletter</button>
+    </form>
+  ) : (
+    <a class="btn" href={`mailto:${site.contactos.email}?subject=Subscrever%20newsletter%20SECClasS`}>Subscrever Newsletter</a>
+  )}
+</div>

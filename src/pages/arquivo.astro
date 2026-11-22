@@ -7,11 +7,12 @@ const porAno = Object.entries(
 ).sort(([a], [b]) => b.localeCompare(a));
 const fmtData = (d) => new Date(d).toLocaleDateString('pt-PT', { day: 'numeric', month: 'long' });
 ---
-<Base title="Arquivo de notícias" description="Notícias e eventos do projeto SECClasS entre 2020 e 2023.">
+<Base title="Arquivo de Notícias" description="Notícias e eventos do projeto SECClasS entre 2020 e 2023.">
   <section class="section" style="padding-top:32px">
     <div class="wrap" style="max-width:860px">
-      <p class="kicker"><a href={url('/')}>SECClasS</a> / Arquivo</p>
-      <h1 style="font-size:clamp(1.8rem,4vw,2.6rem)">Notícias e eventos do projeto (2020–2023)</h1>
+      <p class="kicker"><a href={url('/')}>SECClasS</a> / Arquivo de Notícias</p>
+      <h1 style="font-size:clamp(1.8rem,4vw,2.6rem)">Arquivo de Notícias</h1>
+      <p class="muted" style="margin-top:-8px">Projeto SECClasS, 2020–2023</p>
       <p class="intro">Registo das atividades do projeto financiado: webinars, congressos, reuniões abertas e publicações. As novidades sobre o sistema de classificação estão no <a href={url('/#versoes')}>histórico de versões</a>.</p>
       {porAno.map(([ano, lista]) => (
         <section style="margin-top:32px">
