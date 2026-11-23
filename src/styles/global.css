@@ -67,7 +67,18 @@ p { margin: 0 0 1em; }
 .btn-outline:hover { background: var(--indigo); color: #fff !important; }
 
 /* Topo da página */
-.hero { background: radial-gradient(1200px 500px at 85% -10%, #5a5aa8 0%, transparent 60%), linear-gradient(160deg, var(--navy) 0%, var(--indigo) 100%); color: #fff; padding: 72px 0 64px; }
+.hero { position: relative; color: #fff; padding: 72px 0 64px;
+  background:
+    linear-gradient(90deg, rgba(36,36,72,.97) 0%, rgba(44,44,84,.90) 38%, rgba(71,71,135,.62) 72%, rgba(71,71,135,.48) 100%),
+    var(--hero-img-lg) center 35% / cover no-repeat,
+    var(--navy); }
+@media (max-width: 820px) {
+  .hero { background:
+    linear-gradient(180deg, rgba(36,36,72,.94) 0%, rgba(44,44,84,.88) 100%),
+    var(--hero-img-sm) center / cover no-repeat,
+    var(--navy); }
+}
+.hero-credit { position: absolute; right: 16px; bottom: 10px; margin: 0; font-size: .72rem; font-style: italic; color: rgba(255,255,255,.6); }
 .hero h1 { color: #fff; max-width: 18ch; }
 .hero .lead { font-size: 1.2rem; max-width: 60ch; color: rgba(255,255,255,.88); }
 .hero .ctas { display: flex; gap: 12px; flex-wrap: wrap; margin: 28px 0 36px; }

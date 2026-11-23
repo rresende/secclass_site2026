@@ -12,7 +12,7 @@ const outros = site.downloads.filter((d) => !d.destaque);
 ---
 <Base>
   <!-- Sistema de classificação -->
-  <section class="hero">
+  <section class="hero" style={`--hero-img-lg: url(${url('/img/equinor-1920.webp')}); --hero-img-sm: url(${url('/img/equinor-1100.webp')});`}>
     <div class="wrap">
       <span class="badge">Versão {v.numero} · {v.data}</span>
       <h1>O sistema de classificação da construção para Portugal</h1>
@@ -27,6 +27,7 @@ const outros = site.downloads.filter((d) => !d.destaque);
         <div class="stat"><b>{v.base.split('—')[1]?.trim() ?? v.base}</b><span>Uniclass de referência</span></div>
       </div>
     </div>
+    <p class="hero-credit">Imagem: sede da Equinor em construção, Oslo — A-Lab</p>
   </section>
 
   <!-- Aplicações em destaque -->
